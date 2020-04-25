@@ -1,0 +1,64 @@
+<modification>
+	<id><![CDATA[Product Color Option Template Default]]></id>
+	<version><![CDATA[1.4.4]]></version>
+	<vqmver><![CDATA[2.3.x]]></vqmver>
+	<author><![CDATA[WeDoWeb.com.au | contact@wedoweb.com.au]]></author>
+	<file name="catalog/view/theme/*/template/product/category.tpl">
+		<operation error="log">
+			<search error="log" position="after"><![CDATA[$product['name'];]]></search>
+			<add><![CDATA[<!--BOF Product Color Option-->
+			<?php if(sizeof($product['product_color_options']) > 0) { ?>
+				<div class="product-color-options">
+				<?php foreach ($product['product_color_options'] as $pco) { ?>
+					<span class="<?php echo $pco_color_selector_style; ?>" title="<?php echo $pco['color_name']; ?>" href="" style="background-color: <?php echo $pco['color_code']; ?>;"></span>
+				<?php } ?>
+				</div>
+			<?php } ?>
+			<!--EOF Product Color Option-->]]></add>
+		</operation>
+		<operation error="log">
+			<search error="log" position="after"><![CDATA[<div class="name">']]></search>
+			<add><![CDATA[//BOF Product Color Option
+			if($(element).find('.product-color-options').length > 0)
+				html += '<div class="product-color-options">' + $(element).find('.product-color-options').html() + '</div>';
+			//EOF Product Color Option]]></add>
+		</operation>
+	</file>
+	<file name="catalog/view/theme/*/template/product/product.tpl">
+		<operation error="log">
+			<search error="log" position="before" index="1"><![CDATA[$option['type'] == 'select']]></search>
+			<add><![CDATA[<!--BOF Product Color Option-->
+			<?php if ($option['type'] == 'color') { ?>
+			<div rel="<?php echo $option['option_id']; ?>" id="option-<?php echo $option['product_option_id']; ?>" class="option">
+			  <?php if ($option['required']) { ?>
+			  <span class="required">*</span>
+			  <?php } ?>
+			  <b><?php echo $option['name']; ?>:</b><br />
+			  <?php foreach ($option['option_value'] as $option_value) { ?>
+				<a class="color-option <?php echo $pco_color_selector_style; ?>"				
+				id="color-option-<?php echo $option_value['product_option_value_id']; ?>" 
+				option-value="<?php echo $option_value['product_option_value_id']; ?>"
+				option-text-id="option-text-<?php echo $option['product_option_id']; ?>"
+				style="background-color: <?php echo $option_value['color_code']; ?>"
+				title="<?php echo $option_value['name']; ?> <?php if ($option_value['price']) { ?>(<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)<?php } ?>"></a>
+			  <?php } ?>
+			  <span id="option-text-<?php echo $option['product_option_id']; ?>"></span>
+			  <div class="hidden">
+			  <select name="option[<?php echo $option['product_option_id']; ?>]">
+				<option value=""><?php echo $text_select; ?></option>
+				<?php foreach ($option['option_value'] as $option_value) { ?>
+				<option value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
+				<?php if ($option_value['price']) { ?>
+				(<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
+				<?php } ?>
+				</option>
+				<?php } ?>
+			  </select>
+			  </div>
+			</div>
+			<br />
+			<?php } ?>
+			<!--EOF Product Color Option-->]]></add>
+		</operation>
+	</file>
+</modification>

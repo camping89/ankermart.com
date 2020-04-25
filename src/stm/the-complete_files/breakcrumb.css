@@ -1,0 +1,135 @@
+.dtsc-breakcrumb-bottom
+{
+	clear:both; 
+	margin-top:15px;
+	margin-bottom:15px; 
+	text-align:center; 
+	margin-left:auto; 
+	margin-right:auto;
+	float: left;
+}
+
+.dtsc-breakcrumb-bottom-title
+{
+	float: left;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    padding-left: 19px;
+    text-align: left;
+    width: 250px;
+    font-size: 14px;
+}
+
+.dtsc-breakcrumb-bottom-content
+{
+	float:left;
+	/*width:60%;*/
+}
+.dtsc-breakcrumb-bottom-first
+{
+	float:left;
+	width:100px; 
+	height:20px;
+	background-image: url(../images/1_1.png);  
+	background-repeat: no-repeat; 
+	background-position: 100% 0; 
+	position: relative;
+	color: white;
+	font-size: 11px;
+	font-family: sans-serif;
+	padding-top: 4px;	
+}
+
+.dtsc-breakcrumb-bottom-first > span
+{
+ 	float: left;
+ 	margin-left: 23px;
+}
+
+.dtsc-breakcrumb-bottom-second
+{
+	float:left;
+	width:100px; 
+	height:20px;
+	background-image: url(../images/2_0.png);  
+	background-repeat: no-repeat; 
+	background-position: 100% 0; 
+	position: relative;
+	margin-left:0px;
+	color: black;
+	font-size: 11px;
+	font-family: sans-serif;
+	padding-top: 4px;	
+	
+}
+.dtsc-breakcrumb-bottom-second > span
+{
+ 	float: left;
+    margin-left: 29px
+}
+
+.dtsc-breakcrumb-bottom-second-active
+{
+	float:left;
+	width:100px; 
+	height:20px;
+	background-image: url(../images/2_1.png);  
+	background-repeat: no-repeat; 
+	background-position: 100% 0; 
+	position: relative;
+	margin-left:0px;
+	color: white;
+	font-size: 11px;
+	font-family: sans-serif;
+	padding-top: 4px;		
+}
+.dtsc-breakcrumb-bottom-second-active>span
+{
+	float: left;
+ 	margin-left: 31px;
+}
+
+.dtsc-breakcrumb-bottom-third
+{
+	float:left;
+	width:100px; 
+	height:20px;
+	background-image: url(../images/3_0.png);  
+	background-repeat: no-repeat; 
+	background-position: 100% 0; 
+	position: relative;
+	margin-left:0px;
+	color: black;
+	font-size: 11px;
+	font-family: sans-serif;
+	padding-top: 4px;	
+	
+}
+.dtsc-breakcrumb-bottom-third>span
+{
+	float: left;
+    margin-left: 30px;
+}
+
+.dtsc-breakcrumb-bottom-third-active
+{
+	float:left;
+	width:100px; 
+	height:20px;
+	background-image: url(../images/3_1.png);  
+	background-repeat: no-repeat; 
+	background-position: 100% 0; 
+	position: relative;
+	margin-left:0px;
+	color: white;
+	font-size: 11px;
+	font-family: sans-serif;
+	padding-top: 4px;		
+}
+
+.dtsc-breakcrumb-bottom-third-active > span
+{
+	float: left;
+    margin-left: 30px;
+}

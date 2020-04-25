@@ -1,0 +1,22 @@
+перенос js файла:
+
+
+	GetSingleProduct_ebay.rootLocation = "";
+	GetSingleProduct_ebay.adminFolderName = "admin";
+	
+	меняется на 
+	
+	if(GetSingleProduct_assembly.rootLocation == undefined){
+		GetSingleProduct_ebay.rootLocation = "";
+	}else{
+		GetSingleProduct_ebay.rootLocation = GetSingleProduct_assembly.rootLocation;
+	}
+	if(GetSingleProduct_assembly.adminLocation == undefined){
+		GetSingleProduct_ebay.adminLocation = "admin";
+	}else{
+		GetSingleProduct_ebay.adminLocation = GetSingleProduct_assembly.adminLocation;
+	}
+	
+	
+	
+перенос php файла: ничего не меняется 

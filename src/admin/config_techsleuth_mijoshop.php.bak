@@ -1,0 +1,36 @@
+<?php 
+//////////////////////////////////
+// Author:  Joshua J. Gomes
+// E-mail:  josh@techsleuth.com
+// Web:  http://www.techsleuth.com
+//////////////////////////////////
+
+// HTTP
+define('HTTP_SERVER', '');  //Example:  'http://www.mywebsite/components/com_mijoshop/opencart/admin/'
+define('HTTP_CATALOG', '');  //Example:  'http://www.mywebsite.com/'
+
+// HTTPS
+define('HTTPS_SERVER', '');  //Example:  'https://www.mywebsite/components/com_mijoshop/opencart/admin/'
+define('HTTPS_CATALOG', '');  //Example:  'https://www.mywebsite.com/'
+
+// DIR
+define('DIR_APPLICATION', '');  //Example:  '/Web/Data/Sites/mywebsite_directory/components/com_mijoshop/opencart/admin/'
+define('DIR_SYSTEM', '');  //Example:  '/Web/Data/Sites/mywebsite_directory/components/com_mijoshop/opencart/system/'
+define('DIR_DATABASE', '');  //Example:  '/Web/Data/Sites/mywebsite_directory/components/com_mijoshop/opencart/system/database/'
+define('DIR_LANGUAGE', '');  //Example:  '/Web/Data/Sites/mywebsite_directory/components/com_mijoshop/opencart/admin/language/'
+define('DIR_TEMPLATE', '');  //Example:  '/Web/Data/Sites/mywebsite_directory/components/com_mijoshop/opencart/admin/view/template/'
+define('DIR_CONFIG', '');  //Example:  '/Web/Data/Sites/mywebsite_directory/components/com_mijoshop/opencart/system/config/'
+define('DIR_IMAGE', '');  //Example:  '/Web/Data/Sites/mywebsite_directory/components/com_mijoshop/opencart/image/'
+define('DIR_CACHE', '');  //Example:  '/Web/Data/Sites/mywebsite_directory/components/com_mijoshop/opencart/system/cache/'
+define('DIR_DOWNLOAD', '');  //Example:  '/Web/Data/Sites/mywebsite_directory/components/com_mijoshop/opencart/download/'
+define('DIR_LOGS', '');  //Example:  '/Web/Data/Sites/mywebsite_directory/components/com_mijoshop/opencart/system/logs/'
+define('DIR_CATALOG', '');  //Example:  '/Web/Data/Sites/mywebsite_directory/components/com_mijoshop/opencart/catalog/'
+
+// DB
+define('DB_DRIVER', 'mysql');  //Example:  'mysql'
+define('DB_HOSTNAME', '');  //Example:  'localhost'
+define('DB_USERNAME', '');  //Example:  'myusername'
+define('DB_PASSWORD', '');  //Example:  'mypassword'
+define('DB_DATABASE', '');  //Example:  'database-name'
+define('DB_PREFIX', '');  //Example:  'prefix_mijoshop_'
+?>

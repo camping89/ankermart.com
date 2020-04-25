@@ -1,0 +1,363 @@
+<modification>
+	<id><![CDATA[Product Color Option - Core]]></id>
+	<version><![CDATA[1.4.4]]></version>
+	<vqmver><![CDATA[2.3.x]]></vqmver>
+	<author><![CDATA[WeDoWeb.com.au | contact@wedoweb.com.au]]></author>
+	<file name="catalog/view/theme/*/template/common/footer*.tpl">
+		<operation error="log">
+			<search error="log" position="top"><![CDATA[]]></search>
+			<add><![CDATA[
+			<!--BOF Product Color Option-->
+			<style>
+			.product-color-options span
+			{
+				display:inline-block;
+				width:<?php echo $pco_list_color_selector_width; ?>px;
+				height:<?php echo $pco_list_color_selector_height; ?>px;
+				margin-right:0px;
+				border:2px solid #E7E7E7;
+			}
+
+			.image .product-color-options
+			{
+				display: none;
+			}
+			
+			a.color-option {
+				display:inline-block;
+				width:<?php echo $pco_product_color_selector_width; ?>px;
+				height:<?php echo $pco_product_color_selector_height; ?>px;
+				margin: 3px;
+				padding: 0;
+				border:2px solid #E7E7E7;
+				vertical-align: middle;
+				cursor: pointer;
+				box-sizing: content-box;
+			}
+			
+			a.color-option.color-active, a.color-option:hover {
+				margin: 0;
+				padding: 3px;
+			}
+			
+			.hidden {
+				display: none !important;
+			}
+			
+			/*Oval style*/
+			a.color-option.pco-style-oval,
+			.product-color-options span.pco-style-oval
+			{
+				border-radius: 9999px;
+			}
+
+			/*Double rectangle style*/
+			a.color-option.pco-style-double-rectangle,
+			.product-color-options span.pco-style-double-rectangle
+			{
+				border: 4px double #E7E7E7;
+			}	
+
+			/*Double oval style*/
+			a.color-option.pco-style-double-oval,
+			.product-color-options span.pco-style-double-oval
+			{
+				border-radius: 9999px;
+				border: 4px double #E7E7E7;
+			}		
+			</style>
+			<script type="text/javascript"><!--
+			$("a.color-option").click(function(event)
+			{
+				$this = $(this);
+				
+				// highlight current color box
+				$this.parent().find('a.color-option').removeClass('color-active');
+				$this.addClass('color-active');
+				
+				$('#' + $this.attr('option-text-id')).html($this.attr('title'));
+				
+				// trigger selection event on hidden select
+				$select = $this.parent().find('select');
+				
+				$select.val($this.attr('option-value'));
+				$select.trigger('change');
+				
+				//option redux
+				if(typeof updatePx == 'function') {
+					updatePx();
+				}
+				
+				//option boost
+				if(typeof obUpdate == 'function') {
+					obUpdate($($this.parent().find('select option:selected')), useSwatch);
+				}
+				event.preventDefault();
+			});
+			
+			$("a.color-option").parent('.option').find('.hidden select').change(function()
+			{
+				$this = $(this);
+				var optionValueId = $this.val();
+				$colorOption = $('a#color-option-' + optionValueId);
+				if(!$colorOption.hasClass('color-active'))
+					$colorOption.trigger('click');
+			});
+			//--></script> 
+			<!--EOF Product Color Option-->]]></add>
+		</operation>
+	</file>
+	<file name="catalog/controller/common/footer.php">
+		<operation error="log">
+			<search position="before" index="1" error="log"><![CDATA[$this->render();]]></search>
+			<add><![CDATA[
+			//BOF Product Color Option
+			$this->setData('pco_show_on_category', 1);
+			$this->setData('pco_list_color_selector_width', 12);
+			$this->setData('pco_list_color_selector_height', 12);
+			$this->setData('pco_product_color_selector_width', 15);
+			$this->setData('pco_product_color_selector_height', 15);
+			//EOF Product Color Option
+			]]></add>
+		</operation>
+	</file>
+	<file name="catalog/controller/product/product.php,catalog/controller/product/category.php">		
+		<operation error="log">
+			<search position="before" index="1" error="log"><![CDATA[$this->response->setOutput($this->render());]]></search>
+			<add><![CDATA[
+			//BOF Product Color Option
+			$this->setData('pco_color_selector_style', '');
+			//EOF Product Color Option
+			]]></add>
+		</operation>
+	</file>
+	<file name="admin/controller/catalog/option.php">
+		<operation error="log">
+			<search error="log" position="after"><![CDATA[function getForm()]]></search>
+			<add><![CDATA[//BOF Product Color Option
+			$this->load->language('catalog/pco');
+			$this->data['entry_color_code'] = $this->language->get('entry_color_code');		
+			$this->data['text_color'] = $this->language->get('text_color');		
+			//EOF Product Color Option]]></add>
+		</operation>
+		<operation error="log">
+			<search error="log" position="before"><![CDATA[=> $option_value['option_value_id'],]]></search>
+			<add><![CDATA[//BOF Product Color Option
+			'color_code' => $option_value['color_code'],
+			//EOF Product Color Option]]></add>
+		</operation>
+		<operation error="log">
+			<search error="log" position="replace"><![CDATA[$option['type'] == 'select']]></search>
+			<add><![CDATA[$option['type'] == 'select' || $option['type'] == 'color']]></add>
+		</operation>
+	</file>
+	<file name="admin/controller/catalog/product.php">
+		<operation error="log">
+			<search error="log" position="replace"><![CDATA[$product_option['type'] == 'select']]></search>
+			<add><![CDATA[$product_option['type'] == 'select' || $product_option['type'] == 'color']]></add>
+		</operation>
+		<operation error="skip">
+			<search error="skip" position="replace"><![CDATA[$option_info['type'] == 'select']]></search>
+			<add><![CDATA[$option_info['type'] == 'select' || $option_info['type'] == 'color']]></add>
+		</operation>
+	</file>
+	<file name="admin/model/catalog/option.php">
+		<operation error="log">
+			<search error="log" position="replace"><![CDATA[, sort_order = '" . (int)$option_value['sort_order']]]></search>
+			<add><![CDATA[, color_code = '" . $this->db->escape(html_entity_decode($option_value['color_code'], ENT_QUOTES, 'UTF-8')) . "', sort_order = '" . (int)$option_value['sort_order']]]></add>
+		</operation>
+		<operation error="log">
+			<search error="log" position="before"><![CDATA[=> $option_value['option_value_id'],]]></search>
+			<add><![CDATA[//BOF Product Color Option
+			'color_code' => $option_value['color_code'],
+			//EOF Product Color Option]]></add>
+		</operation>
+	</file>
+	<file name="admin/model/catalog/product.php">
+		<operation error="log">
+			<search error="log" position="replace"><![CDATA[$product_option['type'] == 'select']]></search>
+			<add><![CDATA[$product_option['type'] == 'select' || $product_option['type'] == 'color']]></add>
+		</operation>
+	</file>
+	<file name="admin/view/template/common/header.tpl">
+		<operation error="log">
+			<search error="log" position="after"><![CDATA[view/stylesheet/stylesheet.css]]></search>
+			<add><![CDATA[<!--BOF Product Color Option-->
+			<link rel="stylesheet" type="text/css" href="view/stylesheet/pco.css" />
+			<!--EOF Product Color Option-->]]></add>
+		</operation>
+	</file>
+	<file name="admin/view/template/catalog/option_form.tpl">
+		<operation error="log">
+			<search error="log" position="replace"><![CDATA[<?php if ($type == 'select') { ?>]]></search>
+			<add><![CDATA[<!--BOF Product Color Option-->
+			<?php if ($type == 'color') { ?>
+			<option value="color" selected><?php echo $text_color; ?></option>
+			<?php } else { ?>
+			<option value="color"><?php echo $text_color; ?></option>
+			<?php } ?>
+			<!--EOF Product Color Option-->
+			<?php if ($type == 'select') { ?>]]></add>
+		</operation>
+		<!--OC 1.5.2-1.5.5)-->
+		<operation error="log">
+			<search error="log" position="replace"><![CDATA[<?php echo $entry_image; ?>]]></search>
+			<add><![CDATA[<span class="image"><?php echo $entry_image; ?></span><span class="color"><?php echo $entry_color_code; ?></span>]]></add>
+		</operation>
+		<operation error="log">
+			<search error="log" position="replace" index="1"><![CDATA[<div class="image">]]></search>
+			<add><![CDATA[<!--BOF Product Color Option-->
+			<div class="color color-code-input">
+				<input type="text" name="option_value[<?php echo $option_value_row; ?>][color_code]" value="<?php echo $option_value['color_code']; ?>"  readonly="true" id="color_code<?php echo $option_value_row; ?>"  />
+			</div>
+			<!--EOF Product Color Option--><div class="image">]]></add>
+		</operation>
+		<!--/OC 1.5.2-1.5.5)-->
+		<operation error="log">
+			<search error="log" position="after"><![CDATA[$('select[name=\'type\']').bind]]></search>
+			<add><![CDATA[//BOF Product Color Option
+			if(this.value == 'color'){
+				//hide image uploads, show color pickers
+				$('#option-value').addClass('color');
+			}
+			else
+			{
+				//show image uploads, hide color pickers
+				$('#option-value').removeClass('color');
+			}
+			//EOF Product Color Option]]></add>
+		</operation>
+		<operation error="log">
+			<search error="log" position="replace"><![CDATA[this.value == 'select']]></search>
+			<add><![CDATA[this.value == 'select' || this.value == 'color']]></add>
+		</operation>
+		<operation error="log">
+			<search error="log" position="before"><![CDATA[var option_value_row ]]></search>
+			<add><![CDATA[//BOF Product Color Option
+			$(document).ready(function(){
+				$('select[name=\'type\']').trigger('change');
+			});
+			//EOF Product Color Option]]></add>
+		</operation>
+		<!--OC 1.5.2-1.5.5)-->
+		<operation error="log">
+			<search error="log" position="replace"><![CDATA[</div></td>';]]></search>
+			<add><![CDATA[</div><div class="color color-code-input"><input type="text" name="option_value[' + option_value_row + '][color_code]" value="#000000" readonly="true" id="color_code' + option_value_row + '"  /></div></td>';]]></add>
+		</operation>
+		<!--/OC 1.5.2-1.5.5)-->
+		<operation error="log">
+			<search error="log" position="after"><![CDATA[$('#option-value tfoot').before(html);]]></search>
+			<add><![CDATA[//BOF Product Color Option
+			colorPickerise($($('#option-value-row' + option_value_row + ' .color-code-input input')[0]));
+			//EOF Product Color Option]]></add>
+		</operation>
+		<operation error="log">
+			<search error="log" position="before"><![CDATA[<?php echo $footer; ?>]]></search>
+			<add><![CDATA[<!--BOF Product Color Option-->
+			<link rel="stylesheet" href="view/stylesheet/colorpicker/colorpicker.css" type="text/css" />
+			<script type="text/javascript" src="view/javascript/colorpicker/colorpicker.js"></script>
+			<script type="text/javascript" src="view/javascript/colorpicker/eye.js"></script>
+			<script type="text/javascript" src="view/javascript/colorpicker/utils.js"></script>
+			<script type="text/javascript" src="view/javascript/colorpicker/layout.js?ver=1.0.2"></script>
+			<script type="text/javascript" src="view/javascript/colorpicker/misc.js"></script>
+			<script type="text/javascript">
+			$(document).ready(
+				function()
+				{
+					colorPickerise($('.color-code-input input, input.color-code-input'));
+				}
+			);
+			</script>
+			<!--EOF Product Color Option-->]]></add>
+		</operation>
+	</file>
+	<file name="admin/view/template/catalog/product_form.tpl">
+		<operation error="log">
+			<search error="log" position="replace"><![CDATA[$product_option['type'] == 'select']]></search>
+			<add><![CDATA[$product_option['type'] == 'select' || $product_option['type'] == 'color']]></add>
+		</operation>
+		<operation error="log">
+			<search error="log" position="replace"><![CDATA[ui.item.type == 'select']]></search>
+			<add><![CDATA[ui.item.type == 'select' || ui.item.type == 'color']]></add>
+		</operation>
+	</file>
+	<file name="admin/view/template/sale/order_form.tpl">
+		<operation error="log">
+			<search error="log" position="replace"><![CDATA[option['type'] == 'select']]></search>
+			<add><![CDATA[option['type'] == 'select' || option['type'] == 'color']]></add>
+		</operation>
+	</file>
+	<file name="catalog/controller/checkout/manual.php">
+		<operation error="log">
+			<search error="log" position="replace"><![CDATA[$option['type'] == 'select']]></search>
+			<add><![CDATA[$option['type'] == 'select' || $option['type'] == 'color']]></add>
+		</operation>
+	</file>
+	<file name="catalog/controller/product/category.php">
+		<operation error="log">
+			<search error="log" position="before"><![CDATA['description' =>]]></search>
+			<add><![CDATA[//BOF Product Color Option
+			'product_color_options' => $this->getData('pco_show_on_category', 1)
+			? $this->model_catalog_product->getProductColorOptions($result['product_id'])
+			: array(),
+			//EOF Product Color Option]]></add>
+		</operation>
+	</file>
+	<file name="catalog/controller/product/product.php">
+		<operation error="log">
+			<search error="log" position="replace"><![CDATA[$option['type'] == 'select']]></search>
+			<add><![CDATA[$option['type'] == 'select' || $option['type'] == 'color']]></add>
+		</operation>
+		<operation error="log">
+			<search error="log" position="after"><![CDATA[$option_value['name'],]]></search>
+			<add><![CDATA[//BOF Product Color Option
+			'color_code' => $option_value['color_code'],
+			//EOF Product Color Option]]></add>
+		</operation>
+	</file>
+	<file name="catalog/model/catalog/product.php">
+		<operation error="log">
+			<search error="log" position="replace"><![CDATA[$product_option['type'] == 'select']]></search>
+			<add><![CDATA[$product_option['type'] == 'select' || $product_option['type'] == 'color']]></add>
+		</operation>
+		<operation error="log">
+			<search error="log" position="after"><![CDATA[$product_option_value_data[] =]]></search>
+			<add><![CDATA[//BOF Product Color Option
+			'color_code' => $product_option_value['color_code'],
+			//EOF Product Color Option]]></add>
+		</operation>
+		<operation error="log">
+			<search error="log" position="before" offset="1"><![CDATA[?>]]></search>
+			<add><![CDATA[//BOF Product Color Option
+			public function getProductColorOptions($product_id) {
+				$product_color_options = array();
+
+				$product_option_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_option po LEFT JOIN `" . DB_PREFIX . "option` o ON (po.option_id = o.option_id) LEFT JOIN " . DB_PREFIX . "option_description od ON (o.option_id = od.option_id) WHERE po.product_id = '" . (int)$product_id . "' AND od.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY o.sort_order");
+				
+				foreach ($product_option_query->rows as $product_option) {
+					if ($product_option['type'] == 'color') {
+						$product_option_value_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_option_value pov LEFT JOIN " . DB_PREFIX . "option_value ov ON (pov.option_value_id = ov.option_value_id) LEFT JOIN " . DB_PREFIX . "option_value_description ovd ON (ov.option_value_id = ovd.option_value_id) WHERE pov.product_id = '" . (int)$product_id . "' AND pov.product_option_id = '" . (int)$product_option['product_option_id'] . "' AND ovd.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY ov.sort_order");
+						
+						foreach ($product_option_value_query->rows as $product_option_value) {	
+							$product_color_options[] = array(
+								'color_name' => $product_option_value['name'],
+								'color_code' => $product_option_value['color_code']
+							);
+						}
+						
+						return $product_color_options;
+					}
+				}
+				
+				return $product_color_options;
+			}
+			//EOF Product Color Option]]></add>
+		</operation>
+	</file>
+	<file name="system/library/cart.php">
+		<operation error="log">
+			<search error="log" position="replace"><![CDATA[$option_query->row['type'] == 'select']]></search>
+			<add><![CDATA[$option_query->row['type'] == 'select' || $option_query->row['type'] == 'color']]></add>
+		</operation>
+	</file>
+</modification>

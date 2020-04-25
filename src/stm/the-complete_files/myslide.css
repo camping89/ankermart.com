@@ -1,0 +1,360 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+.dtsc-slideHighlight {
+	 width: 587px; float: left;
+	 margin-left:47px;
+	 border:1px solid rgb(215, 215, 215);
+}
+.dtsc-slideHighlight .left-button {
+	 padding: 47px 12px 0px 0px; width: 22px; height: 101px; float: left;
+}
+.dtsc-slideHighlight .right-button {
+	 padding: 47px 0px 0px 0px; 
+	 width: 21px; height: 101px; float: right;
+}
+.dtsc-slideHighlight .left-button img {
+	cursor: pointer;
+}
+.dtsc-slideHighlight .right-button img {
+	cursor: pointer;
+}
+.dtsc-slideHighlight .viewpost {
+	 padding: 10px 0px; width: 532px; height: 200px; overflow: hidden; float: left;
+}
+.dtsc-slideHighlight .viewpost .view {
+	width: 532px; height: 194px; overflow: hidden; float: left; position: relative;
+	
+}
+.dtsc-slideHighlight .viewpost .view #slide_animation {
+	left: 0px; top: 0px; position: absolute;
+}
+.dtsc-slideHighlight .viewpost .view .slide {
+	width: 1070px; float: left;
+}
+.dtsc-slideHighlight .viewpost .view .slide .item {
+	padding: 10px 0px 0px; width: 163px; text-align: center; margin-right: 15.5px; float: left;
+}
+.dtsc-slideHighlight .viewpost .-view .slide .item img {
+	width: 163px; height: 66px;
+}
+.dtsc-slideHighlight .viewpost .view .slide .item h4 {
+	width: 161px; height: 88px;
+	border:1px solid #969696;
+	background-color:#FFFBF0;
+	border-radius:5px;
+}
+
+
+.dtsc-slideHighlight .viewpost .view .slide .last {
+	margin-right: 15px;
+}
+
+
+
+.dtsc-slideNews {
+	 width: 350px; float: left;
+	 margin-left:2px;
+	 margin-right:-1px;
+}
+.dtsc-slideNews .other{
+	width:200px;
+	float:right;
+	height:14px;
+	color:#FF9933;
+	font-style:italic;
+	font-size:11px;
+	margin-right:12px;
+	
+	background:url(../images/other-news.png) right no-repeat;
+}
+
+
+.dtsc-slideNews .left-button {
+	 margin-top:-53px;
+	 padding:0px 0 0 313px; width: 8px; height: 12px; float: left;
+	  opacity:0.9;
+  	filter:alpha(opacity=90);
+}
+.dtsc-slideNews  .right-button {
+	 margin-top:-53px;
+	 padding: 0px 18px 0px 0px; 
+	 width: 8px; height: 12px; float: right;
+	  opacity:0.9;
+  	filter:alpha(opacity=90);
+}
+.dtsc-slideNews .left-button img {
+	cursor: pointer;
+}
+.dtsc-slideNews .right-button img {
+	cursor: pointer;
+}
+.dtsc-slideNews .viewpost {
+	 padding: 2px 0px; width: 335px; height: 332px; overflow: hidden; float: left;
+}
+.dtsc-slideNews .viewpost .view {
+	width: 335px; height: 332px; overflow: hidden; float: left; position: relative;
+	
+}
+.dtsc-slideNews .viewpost .view #slide_animation {
+	left: 0px; top: 0px; position: absolute;
+}
+.dtsc-slideNews .viewpost .view .slide {
+	width: 1635px; float: left;
+}
+.dtsc-slideNews .viewpost .view .slide .item {
+	padding: 10px 0px 0px; width: 335px;  margin-right: 2px; float: left;
+}
+.dtsc-slideNews .viewpost .view .slide .item img {
+	width: 335px; height: 254px;
+}
+.dtsc-slideNews .viewpost .view .slide .item h4 {
+	width: 335px; height: 70px;
+	
+	background: #9B9B9B url(../images/bottom-news-bg.png)left bottom repeat-x;
+	
+	
+}
+.dtsc-slideNews .viewpost .view .slide .item h4 span {
+	font-size:12px;
+	color:#1D1D1D !important;
+}
+.dtsc-slideNews .viewpost .view .slide .item h4 a {
+	
+	font-size:14px; 
+	color:#0074BE;
+	text-decoration:none;
+	text-align:left !important;
+}
+
+.dtsc-slideNews .viewpost .view .slide .last {
+	margin-right: 0px;
+}
+/*slide khuyen mai 1*/
+
+.dtsc-slidePro1 {
+	 width: 682px; float: left;
+	 margin-left:2px;
+	 
+}
+
+
+.dtsc-slidePro1 .left-button {
+	margin-top:-142px;
+	 padding: 0px 0px 0px 610px; width: 14px; height: 14px; float: left;
+	 opacity:0.6;
+  	filter:alpha(opacity=60);
+}
+.dtsc-slidePro1 .right-button {
+	margin-top:-142px;
+	 padding: 0px 40px 0px 0px; 
+	 width: 14px; height: 14px; float: right;
+	 opacity:0.6;
+  	filter:alpha(opacity=60);
+}
+.dtsc-slidePro1 .left-button img {
+	cursor: pointer;
+}
+.dtsc-slidePro1 .right-button img {
+	cursor: pointer;
+}
+.dtsc-slidePro1 .viewpost {
+	 padding: 2px 0px; width: 681px; height: 375px; overflow: hidden; float: left;
+}
+.dtsc-slidePro1 .viewpost .view {
+	width: 681px; height: 375px; overflow: hidden; float: left; position: relative;
+	
+}
+.dtsc-slidePro1 .viewpost .view #slide_animation2 {
+	left: 0px; top: 0px; position: absolute;
+}
+.dtsc-slidePro1 .viewpost .view .slide {
+	width: 6810px; float: left;
+}
+.dtsc-slidePro1 .viewpost .view .slide .item {
+	padding: 10px 0px 0px; width: 681px; text-align: center; margin-right: 0px; float: left;
+}
+.dtsc-slidePro1 .viewpost .view .slide .item img {
+	width: 681px; height: 245px;
+}
+.dtsc-slidePro1 .viewpost .view .slide .item h4 {
+	width: 678px; min-height: 100px;
+
+}
+
+/*end slide khuyen mai 1*/
+.dtsc-slidePro2 {
+	 width: 660px; float: left;
+	 margin-left:2px;
+	 
+}
+
+
+.dtsc-slidePro2 .left-button {
+	margin-top:-82px;
+	 padding: 0px 0px 0px 615px; width: 14px; height: 14px; float: left;
+	 opacity:0.6;
+  	filter:alpha(opacity=60);
+}
+.dtsc-slidePro2 .right-button {
+	margin-top:-82px;
+	 padding: 0px 5px 0px 0px; 
+	 width: 14px; height: 14px; float: right;
+	 opacity:0.6;
+  	filter:alpha(opacity=60);
+}
+.dtsc-slidePro2 .left-button img {
+	cursor: pointer;
+}
+.dtsc-slidePro2 .right-button img {
+	cursor: pointer;
+}
+.dtsc-slidePro2 .viewpost {
+	 padding: 2px 0px; width: 659px; height: 335px; overflow: hidden; float: left;
+}
+.dtsc-slidePro2 .viewpost .view {
+	width: 659px; height: 335px; overflow: hidden; float: left; position: relative;
+	margin-left:18px;
+	
+}
+.dtsc-slidePro2 .viewpost .view #slide_animation2 {
+	left: 0px; top: 0px; position: absolute;
+}
+.dtsc-slidePro2 .viewpost .view .slide {
+	width: 6590px; float: left;
+}
+.dtsc-slidePro2 .viewpost .view .slide .item {
+	padding: 10px 0px 0px; width: 656px; text-align: center; margin-right: 0px; float: left;
+}
+.dtsc-slidePro2 .viewpost .view .slide .item img {
+	width: 659px; height: 245px;
+	margin-right:0px;
+	
+}
+
+.dtsc-slidePro2 .viewpost .view .slide .item h3 {
+	width: 659px; min-height: 100px;
+
+	
+	
+}
+
+
+/*slide khuyen mai 2*/
+.dtsc-slidePro {
+	 width: 669px; float: left;
+	 margin-left:6px;
+		 
+}
+
+
+.dtsc-slidePro .left-button {
+	width: 16px; height: 58px; float: left;
+	margin-right:1px;
+	
+}
+.dtsc-slidePro .right-button {
+	
+	 width: 16px; height: 58px; float: right;
+	 margin-left:1px;
+}
+.dtsc-slidePro .left-button img {
+	cursor: pointer;
+}
+.dtsc-slidePro .right-button img {
+	cursor: pointer;
+}
+.dtsc-slidePro .viewpost {
+	 padding: 0px 0px; width: 635px; height: 58px; overflow: hidden; float: left;
+}
+.dtsc-slidePro .viewpost .view {
+	  position: relative;
+	
+}
+.dtsc-slidePro .viewpost .view #slide_animation {
+	left: 0px; top: 0px; position: absolute;
+}
+.dtsc-slidePro .viewpost .view .slide {
+	width: 1270px; float: left;
+}
+.dtsc-slidePro .viewpost .view .slide .item {
+	padding: 6px 0px 0px; width: 57px; height:50px; text-align: center; margin-right: 5px; float: left;
+	border: 1px solid #939393;
+	
+}
+.dtsc-slidePro .viewpost .view .slide .item img {
+	width: 52px; height: 44px;
+	
+}
+
+.dtsc-slidePro .viewpost .view .slide .last {
+	margin-right: 0px;
+}
+.dtsc-slidePro .viewpost .view .slide .current {
+	border: 1px solid #FF5F00;
+	
+	
+}
+
+/*slide footer*/
+.dtsc-slideFooter {
+	 width: 614px; 
+	 float: left;
+	 margin-left:60px;
+	 margin-top:15px;
+	 height: 164px;
+}
+
+
+.dtsc-slideFooter .left-button {
+	width: 14px; height: 14px; float: left;
+	margin-left:282px;
+	
+}
+.dtsc-slideFooter .right-button {
+	
+	 width: 14px; height: 14px; float: right;
+	 margin-right:296px;
+}
+.dtsc-slideFooter .left-button img {
+	cursor: pointer;
+}
+.dtsc-slideFooter .right-button img {
+	cursor: pointer;
+}
+.dtsc-slideFooter .viewpost {
+	 padding: 0px 0px; width: 601px; height: 150px; overflow: hidden; float: left;
+}
+.dtsc-slideFooter .viewpost .view {
+	  position: relative;
+	
+}
+.dtsc-slideFooter .viewpost .view #slide_animation_f {
+	left: 0px; top: 0px; position: absolute;
+}
+.dtsc-slideFooter .viewpost .view .slide {
+	width: 1202px; float: left;
+}
+.dtsc-slideFooter .viewpost .view .slide .item {
+	padding: 6px 0px 0px; width: 180px; height:150px; text-align:left; margin-right: 30px; float: left;
+
+	
+}
+.dtsc-slideFooter .viewpost .view .slide .item img {
+	width: 180px; height: 50px;
+	
+}
+.dtsc-slideFooter .viewpost .view .slide .item h4 {
+	width: 180px; height: 40px; font-size:13px;
+	color:#3E3E3E;	
+}
+.dtsc-slideFooter .viewpost .view .slide .item .btt {
+	width: 180px; height: 25px;
+	
+	
+}
+.dtsc-slideFooter .viewpost .view .slide .last {
+	margin-right: 1px;
+}
