@@ -1,0 +1,3 @@
+# SEO URL Settings
+RewriteEngine On
+RewriteBase /

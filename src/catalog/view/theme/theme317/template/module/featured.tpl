@@ -132,7 +132,7 @@
 						
 					</div>
 				</div>
-				<a href="<?php echo $product['href']; ?>"   rel="colorbox" class="colorbox<?php echo $i;?> quick-view-button"><i class=" icon-search "></i></a>
+				<!--<a href="<?php echo $product['href']; ?>"   rel="colorbox" class="colorbox<?php echo $i;?> quick-view-button"><i class=" icon-search "></i></a>-->
 				<div class="inner">
 					<div class="f-left">
 						
@@ -146,10 +146,10 @@
 							<?php } ?>
 						</div>
 						<?php } ?>
-						<div class="name maxheight-feat"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
-						<?php if ($product['description']) {?>
+						<div class="name maxheight-feat"><a href="<?php echo $product['href']; ?>" title="<?php echo $product['name']; ?>"><?php echo mb_substr($product['name'],0,60,'UTF-8').'...';?></a></div>
+						<!--<?php if ($product['description']) {?>
 						<div class="description"><?php echo mb_substr($product['description1'],0,60,'UTF-8').'...';?></div>
-						<?php } ?>
+						<?php } ?>-->
 						
 					</div>
 					<div class="cart-button">

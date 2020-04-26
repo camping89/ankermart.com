@@ -1,7 +1,9 @@
 <?php echo $header; ?>
-<div class="<?php if ($column_right) { ?>span9<?php } else {?>span12<?php } ?>">
+<!--<div class="<?php if ($column_right) { ?>span9<?php } else {?>span12<?php } ?>">-->
+<div class="span12">
 	<div class="row">
-<div class="<?php if ($column_left or $column_right) { ?>span9<?php } ?> <?php if ($column_left and $column_right) { ?>span6<?php } ?> <?php if (!$column_right and !$column_left) { ?>span12 <?php } ?>" id="content"><?php echo $content_top; ?>
+<!--<div class="<?php if ($column_left or $column_right) { ?>span9<?php } ?> <?php if ($column_left and $column_right) { ?>span6<?php } ?> <?php if (!$column_right and !$column_left) { ?>span12 <?php } ?>" id="content"><?php echo $content_top; ?>-->
+<div class="span12" id="content"><?php echo $content_top; ?>
   <div class="breadcrumb">
 	<?php foreach ($breadcrumbs as $breadcrumb) { ?>
 	<?php echo $breadcrumb['separator']; ?><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
@@ -20,17 +22,17 @@
   <?php } ?>
   <?php if ($categories) { ?>
   <div class="box subcat">
-	<div class="box-heading"><?php echo $text_refine; ?></div>
+	<!--<div class="box-heading"><?php echo $text_refine; ?></div>-->
 	<div class="box-content">
 		
 		<div class="box-product box-subcat">
 			<ul class="row"><?php $i=0;?>
 				<?php foreach ($categories as $category) { $i++; ?>
 				<?php 
-						if ($i%3==1) {
+						if ($i%4==1) {
 							$a='first-in-line';
 						}
-						elseif ($i%3==0) {
+						elseif ($i%4==0) {
 							$a='last-in-line';
 						}
 						else {
@@ -81,10 +83,10 @@
 	<ul class="row">
 		<?php $i=0; foreach ($products as $product) { $i++; ?>
 		<?php 
-			if ($i%3==1) {
+			if ($i%4==1) {
 				$a='first-in-line';
 			}
-			elseif ($i%3==0) {
+			elseif ($i%4==0) {
 				$a='last-in-line';
 			}
 			else {
@@ -139,7 +141,7 @@
   <?php echo $column_left; ?>
 	</div>
 </div>
-<?php echo $column_right; ?>
+<!--<?php echo $column_right; ?>-->
 
 <script type="text/javascript"><!--
 function display(view) {

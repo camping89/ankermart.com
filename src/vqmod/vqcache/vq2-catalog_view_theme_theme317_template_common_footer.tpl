@@ -150,7 +150,6 @@
 		<div class="row">
 			<div class="span12">
 				<div id="powered"><?php echo $powered; ?></div>
-				<div id="social"><?php echo $social; ?></div>
 			</div>
 		</div>
 	</div>

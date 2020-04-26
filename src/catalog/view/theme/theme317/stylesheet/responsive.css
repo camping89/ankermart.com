@@ -8,6 +8,20 @@
 	padding:8px;
 	}
 }
+@media (min-width:1024px){
+	#cart .heading span.link_a i.icon-shopping-cart {
+		display:block;
+		float: left;
+		margin: 3px 10px;
+	 }
+}
+@media (max-width:978px){
+	#search{
+		margin-bottom: 25px !important;
+		float: right;
+		clear: right;
+	}
+}
 @media (max-width: 1120px) {
 	
 	}

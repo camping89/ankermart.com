@@ -6,7 +6,8 @@
 .fluid_container {
 	margin-bottom:10px;
 	overflow:hidden;
-	width:67.52%;
+	/* width:67.52%; */
+	width:100%;
 	float:left;
 	}
 .camera_wrap a, .camera_wrap img, 

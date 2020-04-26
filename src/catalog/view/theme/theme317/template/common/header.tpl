@@ -143,6 +143,7 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 			<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="account/account") {echo "active";} ?>" href="<?php echo $account; ?>"><i class="icon-user"></i><?php echo $text_account; ?></a></li>
 			<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="checkout/cart") {echo "active";} ?>" href="<?php echo $shopping_cart; ?>"><i class="icon-shopping-cart"></i><?php echo $text_shopping_cart; ?></a></li>
 			<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="checkout/checkout") {echo "active";} ?>" href="<?php echo $checkout; ?>"><i class="icon-check"></i><?php echo $text_checkout; ?></a></li>
+			
 			<?php if (!$logged) { ?>
 			<?php echo $text_welcome; ?>
 			<?php } else { ?>
@@ -201,8 +202,9 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 						<?php if (!isset($this->request->get['route'])) { $route='active'; }  else {$route='';}?> <li class="first"><a class="<?php echo $route; if (isset($this->request->get['route']) && $this->request->get['route']=="common/home") {echo "active";} ?>" href="<?php echo $home; ?>"><i class="icon-home"></i><?php echo $text_home; ?></a></li>
 						<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="account/wishlist") {echo "active";} ?>" href="<?php echo $wishlist; ?>" id="wishlist-total"><i class="icon-star"></i><?php echo $text_wishlist; ?></a></li>
 						<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="account/account") {echo "active";} ?>" href="<?php echo $account; ?>"><i class="icon-user"></i><?php echo $text_account; ?></a></li>
-						<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="checkout/cart") {echo "active";} ?>" href="<?php echo $shopping_cart; ?>"><i class="icon-shopping-cart"></i><?php echo $text_shopping_cart; ?></a></li>
-						
+						<!--<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="checkout/cart") {echo "active";} ?>" href="<?php echo $shopping_cart; ?>"><i class="icon-shopping-cart"></i><?php echo $text_shopping_cart; ?></a></li>-->
+						<li><a href="/index.php?route=account/track_order">ORDER STATUS</a></li>
+						<li><a href="/faq">FAQ</a></li>
 						<?php if (!$logged) { ?>
 								<?php echo $text_welcome; ?>
 								<?php } else { ?>
@@ -221,9 +223,9 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 				<div class="cart-position">
 					<div class="cart-inner"><?php echo $cart; ?></div>
 				</div>
-				<div class="button-checkout">
+				<!--<div class="button-checkout">
 					<a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="checkout/checkout") {echo "active";} ?>" href="<?php echo $checkout; ?>"><?php echo $text_checkout; ?></a>
-				</div>
+				</div>-->
 				<div id="search">
 					<div class="inner">
 						<div class="button-search"><i class="icon-search"></i><?php echo $text_search; ?></div>
@@ -278,6 +280,7 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 						<?php } ?>
 						</li>
 						<?php } ?>
+						<li><a href="/index.php?route=information/contact">CONTACT US</a></li>
 					</ul>
 				</div>
 				
@@ -344,8 +347,8 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 						<?php } ?>
 						</li>
 						<?php } ?>
-						<li><a href="/index.php?route=account/track_order">ORDER STATUS</a></li>
-						<li><a href="/faq">FAQ</a></li>
+						<!--<li><a href="/index.php?route=account/track_order">ORDER STATUS</a></li>
+						<li><a href="/faq">FAQ</a></li>-->
 						<li><a href="/index.php?route=information/contact">CONTACT US</a></li>
 					</ul>
 					

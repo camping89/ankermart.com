@@ -1,9 +1,9 @@
 <?php
 // HTTP
-define('HTTP_SERVER', 'https://dev.ankermart.com/');
+define('HTTP_SERVER', 'http://dev.ankermart.com/');
 
 // HTTPS
-//define('HTTPS_SERVER', 'https://ankermart.com/');
+define('HTTPS_SERVER', 'https://dev.ankermart.com/');
 
 // DIR
 /*define('DIR_APPLICATION', '/home/ankepecl/public_html/catalog/');
@@ -32,8 +32,8 @@ define('DIR_LOGS', './system/logs/');
 // DB
 define('DB_DRIVER', 'mysqliz');
 define('DB_HOSTNAME', 'localhost');
-define('DB_USERNAME', 'ankepecl_ocar475');
-define('DB_PASSWORD', '3@eiS38p]m');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', 'root');
 define('DB_DATABASE', 'ankepecl_ocar475');
 define('DB_PREFIX', 'oc_');
 ?>

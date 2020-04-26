@@ -2,7 +2,7 @@
 
   <div class="heading">
 	<span class="link_a"> 
-		<span class="bg-cart"></span>
+		<!--<span class="bg-cart"></span>-->
 		<i class="icon-shopping-cart"></i>
 		<b><?php echo $heading_title; ?></b>
 		<span class="sc-button"></span>
