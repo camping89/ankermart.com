@@ -190,6 +190,7 @@ aside #compare {
 	}
 #full_gallery {
 	display:block;
+	margin: 0 auto;
 	}
 #default_gallery {
 	display:none;
@@ -234,7 +235,7 @@ aside #compare {
 	}
 footer > div.container {display:none;}
 footer > div+div.container {display:block;}
-footer {padding:0;margin-top:0;}
+footer {padding:0;margin-top:0;background: none !important;}
 #powered {margin-top:0; padding:15px 20px; background:none;}
 header #logo {margin:78px 0 29px 10px}
 .cart-position {

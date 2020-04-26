@@ -4824,6 +4824,7 @@ input#sub_category {
 
 	margin-bottom:30px;
 
+	min-height: 250px;
 	}
 
 .login-content .heading {
@@ -5978,7 +5979,7 @@ span.toggle {
 
 	margin-top:75px;
 
-	margin-left:15px;
+	/* margin-left:15px; */
 
 	line-height:23px;
 

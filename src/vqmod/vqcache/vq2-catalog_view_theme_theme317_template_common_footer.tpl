@@ -148,7 +148,7 @@
 	
 	<div class="container">
 		<div class="row">
-			<div class="span12">
+			<div class="span12 text-center">
 				<div id="powered"><?php echo $powered; ?></div>
 			</div>
 		</div>
