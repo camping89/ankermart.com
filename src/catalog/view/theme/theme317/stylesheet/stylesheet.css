@@ -1248,7 +1248,7 @@ header #cart .cart .remove {
 
 header #cart .cart .remove>span:hover {
 
-	color:##3498db
+	color:#3498db;
 
 	}
 
@@ -4612,7 +4612,7 @@ a.button-prod {
 
 	font-size:13px;
 
-	color:##7E7E7E
+	color:#7E7E7E;
 
 	}
 
