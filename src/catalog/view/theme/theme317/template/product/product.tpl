@@ -84,12 +84,12 @@
 	<div class="span8">
 		<h1><?php echo $heading_title; ?></h1>
 	  <div class="description">
-		<div class="product-section"><font color=#323232>CONDITION:</font> New<br>
-			<font color=#323232>SHIPPING:</font> FREE SHIPPING<br>
-            <font color=#323232>CARRIER:</font> FEDEX / UPS GROUND<br>
-            <font color=#323232>LOCATION:</font> DIRECT FROM MANUFACTURER<br>
-            <font color=#323232>EXPECTED SHIP:</font> SHIPS IN 2-4 BUSINESS DAYS<br>
-            <font color=#323232>WARRANTY:</font> MANUFACTURER'S WARRANTY<br>
+		<div class="product-section"><font color=#323232>Condition:</font> New<br>
+			<font color=#323232>Shipping:</font> Free shipping<br>
+            <font color=#323232>Carrier:</font> Fedex / UPS Ground<br>
+            <font color=#323232>Location:</font>Direct from manufacturer<br>
+            <font color=#323232>Expected Ship:</font>Ships in 2-4 business days<br>
+            <font color=#323232>Warranty:</font>Manufacturer's warranty<br>
             
 
 			<?php if ($manufacturer) { ?>
