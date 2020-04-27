@@ -10,7 +10,7 @@
 	<div class="product-info">
 		<div class="row">
 
-		<div class="span3">
+		<div class="span4">
 			<h1 class="view"><?php echo $heading_title; ?></h1>
 	
 	<script type="text/javascript">
@@ -81,7 +81,7 @@
 		</div>
 		<?php } ?>
 		</div>
-	<div class="span6">
+	<div class="span8">
 		<h1><?php echo $heading_title; ?></h1>
 	  <div class="description">
 		<div class="product-section"><font color=#323232>CONDITION:</font> New<br>
