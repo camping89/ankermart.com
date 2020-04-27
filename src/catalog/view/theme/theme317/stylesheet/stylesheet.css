@@ -3746,7 +3746,7 @@ border-radius:3px;
 
 	display:none;
 
-	max-width:270px;
+	max-width:100%;
 
 	position:relative;
 
@@ -4824,7 +4824,7 @@ input#sub_category {
 
 	margin-bottom:30px;
 
-	min-height: 250px;
+	min-height: 270px;
 	}
 
 .login-content .heading {
