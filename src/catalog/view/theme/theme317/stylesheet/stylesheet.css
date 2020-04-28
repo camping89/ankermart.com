@@ -3952,7 +3952,7 @@ border-radius:3px;
 
 .product-info .description .product-section {
 
-	font-weight:bold;
+	font-weight:normal;
 
 	color:#3498db;
 
@@ -3999,7 +3999,14 @@ border-radius:3px;
 	margin:0 9px;
 
 	}
-
+	.product-info .description .product-section .in-stock{
+		background-color:#6BA239;
+	}
+	
+	.product-info .description .product-section .out-of-stock{
+		background-color:#D81E1D;
+	}
+	
 .product-info .price {
 
 	font-family: Arial, sans-serif;
@@ -5655,14 +5662,17 @@ i.icon-trash {
 
 .cart-info td.name a {
 
-	color:#3498db;
-
+	/* color:#3498db; */
+	color: #333;;
 	font-size:16px;
 
 	font-style:italic;
 
 	}
-
+	.cart-info td.name a:hover, .cart-info td.name a:focus{
+		text-decoration: underline;
+		color:#3498db;
+	}
 .content.shop-cart-content>p{
 
 	border:1px solid #bbbaba;

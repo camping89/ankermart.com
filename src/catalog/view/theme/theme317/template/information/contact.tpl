@@ -39,13 +39,13 @@
 			</div>
 		</div>
 		<div class="control-group">
-			<label class="control-label" for="captcha"><?php echo $entry_captcha; ?></label>
+			<!--<label class="control-label" for="captcha"><?php echo $entry_captcha; ?></label>-->
 			<div class="controls">
-				<input type="text" class="capcha" name="captcha" value="<?php echo $captcha; ?>" />
+				<!--<input type="text" class="capcha" name="captcha" value="<?php echo $captcha; ?>" />
 				<div class="captcha"><img src="index.php?route=information/contact/captcha" alt="" /></div>
 				<?php if ($error_captcha) { ?>
 				<span class="error help-inline"><?php echo $error_captcha; ?></span>
-				<?php } ?>
+				<?php } ?>-->
 				<div class="buttons"><a onclick="$('#contact').submit();" class="button"><span><?php echo $button_continue; ?></span></a></div>
 			</div>
 		</div>
@@ -55,7 +55,7 @@
 	<?php echo $column_left; ?>
 	</div>
 </div>
-<!--<?php echo $column_right; ?>-->
+<?php echo $column_right; ?>
 <aside class="span3" id="column-right">
 
 <div class="box info">

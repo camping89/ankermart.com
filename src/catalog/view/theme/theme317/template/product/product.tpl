@@ -87,9 +87,9 @@
 		<div class="product-section"><font color=#323232>Condition:</font> New<br>
 			<font color=#323232>Shipping:</font> Free shipping<br>
             <font color=#323232>Carrier:</font> Fedex / UPS Ground<br>
-            <font color=#323232>Location:</font>Direct from manufacturer<br>
-            <font color=#323232>Expected Ship:</font>Ships in 2-4 business days<br>
-            <font color=#323232>Warranty:</font>Manufacturer's warranty<br>
+            <font color=#323232>Location:</font> Direct from manufacturer<br>
+            <font color=#323232>Expected Ship:</font> Ships in 2-4 business days<br>
+            <font color=#323232>Warranty:</font> Manufacturer's warranty<br>
             
 
 			<?php if ($manufacturer) { ?>
@@ -99,7 +99,25 @@
 			<?php if ($reward) { ?>
 			<span><?php echo $text_reward; ?></span> <?php echo $reward; ?><br />
 			<?php } ?>
+
+		    <!-- <option value="9">5-STOCK</option>
+                 <option value="6">BACK ORDER</option>
+                 <option value="7">IN STOCK</option>
+                 <option value="14" selected="selected">ITEM IS NO LONGER AVAILABLE	</option>
+                 <option value="5">OUT OF STOCK</option>-->
+			
+			<?php if ($stock_status_id == 7 || $stock_status_id == 9) { ?>
+			<span><?php echo $text_stock; ?></span><div class="prod-stock in-stock"><?php echo $stock; ?></div>
+			<?php } ?>
+
+			<?php if ($stock_status_id == 5) { ?>
+			<span><?php echo $text_stock; ?></span><div class="prod-stock out-of-stock"><?php echo $stock; ?></div>
+			<?php } ?>
+
+			<?php if ($stock_status_id != 5 && $stock_status_id != 7 && $stock_status_id != 9) { ?>
 			<span><?php echo $text_stock; ?></span><div class="prod-stock"><?php echo $stock; ?></div>
+			<?php } ?>
+			
 		</div>
 		
 	  <?php if ($price) { ?>

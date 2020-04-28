@@ -67,11 +67,14 @@
 			  <small><?php echo $product['reward']; ?></small>
 			  <?php } ?></td>
 			<td class="model"><?php echo $product['model']; ?></td>
-			<td class="quantity"><input type="text" name="quantity[<?php echo $product['key']; ?>]" value="<?php echo $product['quantity']; ?>" size="1" />
-			  
+			<td class="quantity">
+			  <div class="cart-row-qty">
+			  	<input style="float:left;max-width:100px;" type="text" name="quantity[<?php echo $product['key']; ?>]" value="<?php echo $product['quantity']; ?>" size="1" />
+				<span style="float:right;"><a class="input-update" onClick="document.getElementById('form-cart').submit()" ><i class=" icon-refresh"></i></a></span>
+			  </div>
 			  <div class="wrapper mt5">
 			  <!--<input class="input-update" type="submit"  alt="<?php echo $button_update; ?>" title="<?php echo $button_update; ?>" />-->
-			  <a class="input-update" onClick="document.getElementById('form-cart').submit()" ><i class=" icon-refresh"></i></a>
+			  
 			  &nbsp;<a href="<?php echo $product['remove']; ?>"><!--<img src="catalog/view/theme/theme317/image/remove.png" alt="<?php echo $button_remove; ?>" title="<?php echo $button_remove; ?>" />--><i class="icon-trash"></i></a>
 			  </div>
 			  </td>

@@ -159,7 +159,7 @@
   <?php echo $column_left; ?>
 	</div>
 </div>
-<!--<?php echo $column_right; ?>-->
+<?php echo $column_right; ?>
 
 <script type="text/javascript"><!--
 function display(view) {
