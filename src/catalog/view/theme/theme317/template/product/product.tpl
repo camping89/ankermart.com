@@ -10,7 +10,7 @@
 	<div class="product-info">
 		<div class="row">
 
-		<div class="span4">
+		<div class="span6">
 			<h1 class="view"><?php echo $heading_title; ?></h1>
 	
 	<script type="text/javascript">
@@ -81,7 +81,7 @@
 		</div>
 		<?php } ?>
 		</div>
-	<div class="span8">
+	<div class="span6">
 		<h1><?php echo $heading_title; ?></h1>
 	  <div class="description">
 		<div class="product-section"><font color=#323232>Condition:</font> New<br>
@@ -110,11 +110,11 @@
 			<span><?php echo $text_stock; ?></span><div class="prod-stock in-stock"><?php echo $stock; ?></div>
 			<?php } ?>
 
-			<?php if ($stock_status_id == 5) { ?>
+			<?php if ($stock_status_id == 5 || $stock_status_id == 14) { ?>
 			<span><?php echo $text_stock; ?></span><div class="prod-stock out-of-stock"><?php echo $stock; ?></div>
 			<?php } ?>
 
-			<?php if ($stock_status_id != 5 && $stock_status_id != 7 && $stock_status_id != 9) { ?>
+			<?php if ($stock_status_id != 5 && $stock_status_id != 7 && $stock_status_id != 9 && $stock_status_id != 14) { ?>
 			<span><?php echo $text_stock; ?></span><div class="prod-stock"><?php echo $stock; ?></div>
 			<?php } ?>
 			

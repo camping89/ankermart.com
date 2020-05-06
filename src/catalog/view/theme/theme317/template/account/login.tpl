@@ -26,7 +26,7 @@
 				</div>
 			</div>
 			<div class="content">
-				<p><?php echo $text_register_account; ?></p>
+				<p style="min-height:90px;"><?php echo $text_register_account; ?></p>
 				<a href="<?php echo $register; ?>" class="button-cont-right"><?php echo $button_continue; ?><i class="icon-circle-arrow-right"></i></a>
 			</div>
 		  </div>

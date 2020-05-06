@@ -17,7 +17,6 @@
            <?php
               $dom = new DOMDocument();
               $dom->loadHTML($description);
-              $index = 1;
               foreach($dom->getElementsByTagName('p') as $el){
                   $result_elements[] = ["type" => $el->tagName, "value" => $el->nodeValue];
               }
@@ -28,20 +27,19 @@
                     <div class="panel panel-default">
                       <div class="panel-heading" id="heading<?php echo $index;?>" role="tab">
                         <h4 class="panel-title">
-                          <a class="<?php if ($index != 1) { ?>collapsed<?php } ?>" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $index;?>" aria-expanded="true" aria-controls="collapse<?php echo $index;?>">
+                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $index;?>" aria-expanded="true" aria-controls="collapse<?php echo $index;?>">
                             <?php echo $element_items[0]; ?>
                             <i class="pull-right icon-plus"></i>
                           </a>
                         </h4>
                       </div>
-                      <div class="panel-collapse collapse <?php if ($index == 1) { ?>in<?php } ?>" id="collapse<?php echo $index;?>" role="tabpanel" aria-labelledby="heading<?php echo $index;?>">
+                      <div class="panel-collapse collapse" id="collapse<?php echo $index;?>" role="tabpanel" aria-labelledby="heading<?php echo $index;?>">
                         <div class="panel-body">
                           <?php  echo '<p>' . $element_items[1] . '</p>'; ?>
                         </div>
                       </div>
                     </div>
                   <?php }
-                  $index++;
               }
               //$json = json_encode($result_elements, JSON_UNESCAPED_UNICODE);
               //echo $json;

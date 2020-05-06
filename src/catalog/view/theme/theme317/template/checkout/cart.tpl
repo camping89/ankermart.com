@@ -75,10 +75,14 @@
 			  <div class="wrapper mt5">
 			  <!--<input class="input-update" type="submit"  alt="<?php echo $button_update; ?>" title="<?php echo $button_update; ?>" />-->
 			  
-			  &nbsp;<a href="<?php echo $product['remove']; ?>"><!--<img src="catalog/view/theme/theme317/image/remove.png" alt="<?php echo $button_remove; ?>" title="<?php echo $button_remove; ?>" />--><i class="icon-trash"></i></a>
+			  &nbsp;<a href="<?php echo $product['remove']; ?>">
+			  <!--<img src="catalog/view/theme/theme317/image/remove.png" alt="<?php echo $button_remove; ?>" title="<?php echo $button_remove; ?>" />
+			  <i class="icon-trash"></i>-->
+			  <?php echo $text_remove; ?>
+			  </a>
 			  </div>
 			  </td>
-			<td class="price"><?php echo $product['price']; ?></td>
+			<td class="price price-row-cart"><?php echo $product['price']; ?></td>
 			<td class="total"><?php echo $product['total']; ?></td>
 		  </tr>
 		  <?php } ?>
@@ -232,14 +236,14 @@
 	  <?php $count =0; foreach ($totals as $total) { $count +=1; if ($total == end($totals)) {$a='last';} else {$a='';} ?>
 	  <tr class="row-table-<?php echo $count; ?>">
 		<td class="right cart-total-name <?php echo $a;?>" ><b><?php echo $total['title']; ?>:</b></td>
-		<td class="right cart-total1 <?php echo $a;?>"><?php echo $total['text']; ?></td>
+		<td class="right cart-total1 <?php if($count==1) {echo 'price-row-cart';}?> <?php echo $a;?>"><?php echo $total['text']; ?></td>
 	  </tr>
 	  <?php } ?>
 	</table>
   </div>
 	<div class="buttons">
-	<div class="right"><a href="<?php echo $checkout; ?>" class="button-cont-right"><?php echo $button_checkout; ?><i class="icon-check"></i></a></div>
-	<div class="center"><a href="<?php echo $continue; ?>" class="button-cont-right"><?php echo $button_shopping; ?><i class="icon-circle-arrow-right"></i></a></div>
+	<div class="right"><a href="<?php echo $checkout; ?>" class="button-cont-right btn-checkout-right"><?php echo $button_checkout; ?><i class="icon-check"></i></a></div>
+	<div class="center"><a href="<?php echo $continue; ?>" class="button-cont-right btn-cont-shopping"><?php echo $button_shopping; ?><i class="icon-circle-arrow-right"></i></a></div>
   </div>
   </div>
   <?php echo $content_bottom; ?></div>

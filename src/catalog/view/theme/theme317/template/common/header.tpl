@@ -229,7 +229,9 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 				<div id="search">
 					<div class="inner">
 						<div class="button-search"><i class="icon-search"></i><?php echo $text_search; ?></div>
-						<input  type="text" name="search" placeholder="<?php echo $text_search; ?>" value="" />
+						<i class="icon-search"></i>
+						<!--<input  type="text" name="search" placeholder="<?php echo $text_search; ?>" value="" />-->
+						<input  type="text" name="search" value="" />
 					</div>
 				</div>
 			</div>

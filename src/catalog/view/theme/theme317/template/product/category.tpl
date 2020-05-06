@@ -4,23 +4,23 @@
 <div class="<?php if ($column_left or $column_right) { ?>span9<?php } ?> <?php if ($column_left and $column_right) { ?>span6<?php } ?> <?php if (!$column_right and !$column_left) { ?>span12 <?php } ?>" id="content"><?php echo $content_top; ?>
   <div class="breadcrumb">
 	<?php foreach ($breadcrumbs as $breadcrumb) { ?>
-	<?php echo $breadcrumb['separator']; ?><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
+	<?php echo ucwords(strtolower($breadcrumb['separator'])); ?><a href="<?php echo $breadcrumb['href']; ?>"><?php echo ucwords(strtolower($breadcrumb['text'])); ?></a>
 	<?php } ?>
   </div>
-  <h1 class="style-1"><?php echo $heading_title; ?></h1>
-  <?php if ($thumb || $description) { ?>
+  <h1><?php echo $heading_title; ?></h1>
+  <!--<?php if ($thumb || $description) { ?>
   <div class="category-info">
-	<!--<?php if ($thumb) { ?>
+	<?php if ($thumb) { ?>
 	<div class="image"><img src="<?php echo $thumb; ?>" alt="<?php echo $heading_title; ?>" /></div>
-	<?php } ?>-->
+	<?php } ?>
 	<?php if ($description) { ?>
 	<?php echo $description; ?>
 	<?php } ?>
   </div>
-  <?php } ?>
-  <?php if ($categories) { ?>
+  <?php } ?>-->
+  <!--<?php if ($categories) { ?>
   <div class="box subcat">
-	<!--<div class="box-heading"><?php echo $text_refine; ?></div>-->
+	<div class="box-heading"><?php echo $text_refine; ?></div>
 	<div class="box-content">
 		
 		<div class="box-product box-subcat">
@@ -48,7 +48,7 @@
 		</div>
 	</div>
   </div>
-  <?php } ?>
+  <?php } ?>-->
   <?php if ($products) { ?>
   <div class="product-filter">
 		<div class="sort"><b><?php echo $text_sort; ?></b>
@@ -155,7 +155,7 @@ function display(view) {
 			if (image != null) {
 				html += '<div class="image span2">' + image + '</div>';
 			}
-			html += '<div class="left span7">';
+			html += '<div class="left span10">';
 				html += '<div class="name">' + $(element).find('.name').html() + '</div>';
 				html += '<div class="description">' + $(element).find('.description').html() + '</div>';
 				var price = $(element).find('.price').html();

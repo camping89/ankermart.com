@@ -12,7 +12,7 @@
   <?php if ($products) { ?>
     <div class="box-container">
   <div class="block-compare">
-  <table class="compare-info table table-bordered">
+  <table class="compare-info table table-bordered" style="width:100%">
     <thead>
       <tr>
         <td class="last" colspan="<?php echo count($products) + 1; ?>"><?php echo $text_product; ?></td>
@@ -20,9 +20,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><?php echo $text_name; ?></td>
+        <td style="width:20%"><?php echo $text_name; ?></td>
         <?php foreach ($products as $product) { ?>
-        <td class="name"><a href="<?php echo $products[$product['product_id']]['href']; ?>"><?php echo $products[$product['product_id']]['name']; ?></a></td>
+        <td class="name" style="width:<?php echo 80/count($products);?>%"><a href="<?php echo $products[$product['product_id']]['href']; ?>"><?php echo $products[$product['product_id']]['name']; ?></a></td>
         <?php } ?>
       </tr>
       <tr>
@@ -123,13 +123,13 @@
     <tr>
       <td class="last-1"></td>
       <?php foreach ($products as $product) { ?>
-      <td class="remove last-1"><a href="<?php echo $product['remove']; ?>" class="button"><span><?php echo $button_remove; ?></span></a></td>
+      <td class="remove last-1"><a href="<?php echo $product['remove']; ?>" class="button button-danger"><span><?php echo $button_remove; ?></span></a></td>
       <?php } ?>
     </tr>
   </table>
   </div>
   <div class="buttons">
-    <div class="right"><a href="<?php echo $continue; ?>" class="button"><span><?php echo $button_continue; ?></span></a></div>
+    <div class="right"><a href="<?php echo $continue; ?>" class="button button-success"><span><?php echo $button_continue; ?></span></a></div>
   </div>
   </div>
   <?php } else { ?>
@@ -138,7 +138,7 @@
   <!--<?php echo $text_empty; ?>-->
   </div>
   <div class="buttons">
-    <div class="right"><a href="<?php echo $continue; ?>" class="button"><span><?php echo $button_continue; ?></span></a></div>
+    <div class="right"><a href="<?php echo $continue; ?>" class="button button-success"><span><?php echo $button_continue; ?></span></a></div>
   </div>
   </div>
   <?php } ?>

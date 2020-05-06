@@ -111,6 +111,7 @@ class ControllerCheckoutCart extends Controller {
       		$this->data['heading_title'] = $this->language->get('heading_title');
 			
 			$this->data['text_next'] = $this->language->get('text_next');
+			$this->data['text_remove'] = $this->language->get('text_remove');
 			$this->data['text_next_choice'] = $this->language->get('text_next_choice');
      		$this->data['text_use_coupon'] = $this->language->get('text_use_coupon');
 			$this->data['text_use_voucher'] = $this->language->get('text_use_voucher');

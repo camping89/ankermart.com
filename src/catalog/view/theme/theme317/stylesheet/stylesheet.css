@@ -931,7 +931,7 @@ body div.shadow{display:none;}
 	color:#3e454c;
 
 	text-transform:uppercase;
-
+	padding-right: 10px;
 	}
 
 #cart .heading span.bg-cart {
@@ -1539,7 +1539,13 @@ header .links a {
 	border-radius:0 3px 3px 0
 
 	}
-
+#search i.icon-search{
+	position: absolute;
+	padding: 10px; 
+	min-width: 40px; 
+	left: 0;
+	height: 40px;
+}
 #search .button-search:hover {
 
 	color:#323232;
@@ -1568,7 +1574,7 @@ header .links a {
 
 	margin:0;
 
-	padding:6px 8px;
+	padding:6px 8px 6px 30px;
 
 	background-color:#fff;
 
@@ -2241,7 +2247,15 @@ a.button {
 	border-radius:3px;
 
 	}
-
+	a.button-danger{
+		background: #db3434 !important;
+		border-color: #c71f1f !important;
+	}
+	
+	a.button-success{
+		background: #5bb75b !important;
+		border-color:#51a351 !important;
+	}
 a.button span {
 
 	color: #fff;
@@ -3852,7 +3866,8 @@ border-radius:3px;
 
 	overflow:hidden;
 
-	max-width:240px;
+	width: 100%;
+	max-width:100%;
 
 	position:relative;
 
@@ -3980,7 +3995,7 @@ border-radius:3px;
 
 	color:#323232;
 
-	font-weight:bold;
+	font-weight:normal
 
 	}
 
@@ -5752,6 +5767,9 @@ td.price {
 	font-size:17px;
 
 	}
+table#total  td.price{
+	color: #333;
+}
 
 table.radio {
 
@@ -7001,3 +7019,12 @@ label{
 	  background: whitesmoke;
   }
   
+  .price-row-cart{
+	  color: #111 !important;
+  }
+  .btn-checkout-right{
+	  color: #6BA239 !important;
+  }
+  .btn-cont-shopping{
+	  color: #111111 !important;
+  }
