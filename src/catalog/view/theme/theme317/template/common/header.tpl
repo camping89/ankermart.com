@@ -220,6 +220,9 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 				<?php if ($logo) { ?>
 					<div id="logo"><a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" /></a></div>
 				<?php } ?>
+				<div class="top-home">
+						<a href="/"><i class="icon-home"></i></a>
+					</div>
 				<div class="cart-position">
 					<div class="cart-inner"><?php echo $cart; ?></div>
 				</div>

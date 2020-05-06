@@ -888,7 +888,10 @@ body div.shadow{display:none;}
 
 #body .swipe .swipe-menu .foot.foot-3 li+li a:before {content:"\f003"}
 
-
+/*Header mobile home icon*/
+.top-home{
+	display: none;
+}
 
 /*********************************************************************************************header-cart*******************************************************************************************/
 

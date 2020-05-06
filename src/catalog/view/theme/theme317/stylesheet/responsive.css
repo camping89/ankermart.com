@@ -163,6 +163,21 @@ and (orientation:landscape) {
 	display:block;
 	line-height:50px;
 	}
+.top-home{
+	display: inherit;
+	position: fixed;
+	float: right;
+	right: 83px;
+	top: 0;
+	z-index: 1111;
+	padding:10px 15px 8px 15px;
+	border-left: 1px solid #000;	
+	border-right: 1px solid #000;	
+}
+.top-home i{
+	font-size: 26px;
+	color: #7e7e7e;
+}
 #cart .heading span.bg-cart {display:none;}
 #cart .heading span.link_a {
 	line-height:50px;
