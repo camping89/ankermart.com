@@ -601,7 +601,7 @@ header #cart.active .content {
 header #cart.active .content .content-scroll {
 	height:100%;
 	overflow:scroll;
-	webkit-overflow-y:scroll
+	-webkit-flow-from:scroll;
 	}
 .cart-bottom .buttons .center {text-align:right;}
 .banner .s-desc  {top:8px; font-size:12px;}

@@ -95,20 +95,18 @@
 <select name="zone_id" class="large-field">
 </select>
 <br />
-<br />
-<br />
 </div>
 <div style="clear: both; padding-top: 15px; border-top: 1px solid #EEEEEE;">
   <label for="newsletter">
   <input class="checkbox" type="checkbox" name="newsletter" value="1" id="newsletter" />
   <?php echo $entry_newsletter; ?></label>
-  <br />
+
   <?php if ($shipping_required) { ?>
-  <input type="checkbox" name="shipping_address" value="1" id="shipping" checked="checked" />
-  <label for="shipping"><?php echo $entry_shipping; ?></label>
+  
+  <label for="shipping"><input type="checkbox" name="shipping_address" value="1" id="shipping" checked="checked" />
+  <?php echo $entry_shipping; ?></label>
   
   <?php } ?>
-
 </div>
 <?php if ($text_agree) { ?>
 <div class="buttons">
@@ -116,6 +114,8 @@
     <?php echo $text_agree; ?>
     <input type="checkbox" name="agree" value="1" />
     </label>
+    
+    <br />
     <a id="button-register" class="button"><span><?php echo $button_continue; ?></span></a>
   </div>
 </div>

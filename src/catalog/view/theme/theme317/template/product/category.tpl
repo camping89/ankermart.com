@@ -7,8 +7,8 @@
 	<?php echo ucwords(strtolower($breadcrumb['separator'])); ?><a href="<?php echo $breadcrumb['href']; ?>"><?php echo ucwords(strtolower($breadcrumb['text'])); ?></a>
 	<?php } ?>
   </div>
-  <h1><?php echo $heading_title; ?></h1>
-  <!--<?php if ($thumb || $description) { ?>
+  <!--<h1><?php echo $heading_title; ?></h1>
+  <?php if ($thumb || $description) { ?>
   <div class="category-info">
 	<?php if ($thumb) { ?>
 	<div class="image"><img src="<?php echo $thumb; ?>" alt="<?php echo $heading_title; ?>" /></div>
