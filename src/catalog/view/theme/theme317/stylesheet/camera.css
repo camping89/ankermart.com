@@ -43,6 +43,7 @@
 }
 .camera_wrap {
 	width: 100%;
+	height: 300px !important;
 }
 .camera_src {
 	display: none;

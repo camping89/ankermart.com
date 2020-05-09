@@ -138,17 +138,18 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 	<div class="swipe-menu">
 		<ul class="links">
 			<?php if (!isset($this->request->get['route'])) { $route='active'; }  else {$route='';}?> <li class="first"><a class="<?php echo $route; if (isset($this->request->get['route']) && $this->request->get['route']=="common/home") {echo "active";} ?>" href="<?php echo $home; ?>"><i class="icon-home"></i><?php echo $text_home; ?></a></li>
-			<li><a href="/index.php?route=account/track_order"><i class="icon-check"></i>Order Status</a></li>
 			<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="account/wishlist") {echo "active";} ?>" href="<?php echo $wishlist; ?>" id="wishlist-total"><i class="icon-star"></i><?php echo $text_wishlist; ?></a></li>
-			<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="account/account") {echo "active";} ?>" href="<?php echo $account; ?>"><i class="icon-user"></i><?php echo $text_account; ?></a></li>
 			<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="checkout/cart") {echo "active";} ?>" href="<?php echo $shopping_cart; ?>"><i class="icon-shopping-cart"></i><?php echo $text_shopping_cart; ?></a></li>
+			<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="account/account") {echo "active";} ?>" href="<?php echo $account; ?>"><i class="icon-user"></i><?php echo $text_account; ?></a></li>
 			<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="checkout/checkout") {echo "active";} ?>" href="<?php echo $checkout; ?>"><i class="icon-check"></i><?php echo $text_checkout; ?></a></li>
+			<li><a href="/index.php?route=account/track_order"><i class="icon-check"></i>Order Status</a></li>
 			
-			<?php if (!$logged) { ?>
+			
+			<!--<?php if (!$logged) { ?>
 			<?php echo $text_welcome; ?>
 			<?php } else { ?>
 			<?php echo $text_logged; ?>
-			<?php } ?>
+			<?php } ?>-->
 		</ul>
 		<?php echo $language; ?>
 		<?php echo $currency; ?>
