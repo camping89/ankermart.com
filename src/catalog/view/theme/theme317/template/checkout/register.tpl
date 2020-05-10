@@ -97,13 +97,15 @@
 <br />
 </div>
 <div style="clear: both; padding-top: 15px; border-top: 1px solid #EEEEEE;">
-  <label for="newsletter">
-  <input class="checkbox" type="checkbox" name="newsletter" value="1" id="newsletter" />
-  <?php echo $entry_newsletter; ?></label>
+  <label class="checkbox" for="newsletter">
+  <input type="checkbox" name="newsletter" value="1" id="newsletter" />
+  <?php echo $entry_newsletter; ?>
+  </label>
 
   <?php if ($shipping_required) { ?>
   
-  <label for="shipping"><input type="checkbox" name="shipping_address" value="1" id="shipping" checked="checked" />
+  <label class="checkbox" for="shipping">
+  <input type="checkbox" name="shipping_address" value="1" id="shipping" checked="checked" />
   <?php echo $entry_shipping; ?></label>
   
   <?php } ?>

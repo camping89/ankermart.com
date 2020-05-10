@@ -3884,7 +3884,7 @@ border-radius:3px;
 
 	clear: both;
 
-	padding:0 20px;
+	padding:0 20px 0 0 ;
 
 	}
 
@@ -7045,4 +7045,8 @@ label{
   }
   .btn-cont-shopping{
 	  color: #333333 !important;
+  }
+  .checkbox
+  {
+	  line-height: 22px;
   }

@@ -117,13 +117,13 @@
     <tr>
       <td></td>
       <?php foreach ($products as $product) { ?>
-      <td><a onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button"><span><?php echo $button_cart; ?></span></a></td>
+      <td class="text-center"><a onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button"><span><?php echo $button_cart; ?></span></a></td>
       <?php } ?>
     </tr>
     <tr>
       <td class="last-1"></td>
       <?php foreach ($products as $product) { ?>
-      <td class="remove last-1"><a href="<?php echo $product['remove']; ?>" class="button button-danger"><span><?php echo $button_remove; ?></span></a></td>
+      <td class="remove last-1 text-center"><a href="<?php echo $product['remove']; ?>" class="button button-danger"><span><?php echo $button_remove; ?></span></a></td>
       <?php } ?>
     </tr>
   </table>

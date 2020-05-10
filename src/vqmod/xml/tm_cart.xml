@@ -21,7 +21,7 @@
 		</operation>
 		<operation error="skip">
 			<search position="replace"><![CDATA[ $_['heading_title'] = 'Shopping Cart'; ]]></search>
-			<add><![CDATA[ $_['heading_title'] = 'Cart:';
+			<add><![CDATA[ $_['heading_title'] = 'Cart';
 				]]></add>
 		</operation>
 	</file>

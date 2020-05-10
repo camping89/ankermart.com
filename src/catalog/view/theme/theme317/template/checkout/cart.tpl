@@ -69,8 +69,8 @@
 			<td class="model"><?php echo $product['model']; ?></td>
 			<td class="quantity">
 			  <div class="cart-row-qty">
-			  	<input style="float:left;max-width:100px;" type="text" name="quantity[<?php echo $product['key']; ?>]" value="<?php echo $product['quantity']; ?>" size="1" />
-				<span style="float:right;"><a class="input-update" onClick="document.getElementById('form-cart').submit()" ><i class=" icon-refresh"></i></a></span>
+			  	<input style="float:left;width:45px;" type="text" name="quantity[<?php echo $product['key']; ?>]" value="<?php echo $product['quantity']; ?>" size="1" />
+				<span style="float:left; margin-left:10px;"><a class="input-update" onClick="document.getElementById('form-cart').submit()" ><i class=" icon-refresh"></i></a></span>
 			  </div>
 			  <div class="wrapper mt5">
 			  <!--<input class="input-update" type="submit"  alt="<?php echo $button_update; ?>" title="<?php echo $button_update; ?>" />-->
@@ -78,7 +78,7 @@
 			  &nbsp;<a href="<?php echo $product['remove']; ?>">
 			  <!--<img src="catalog/view/theme/theme317/image/remove.png" alt="<?php echo $button_remove; ?>" title="<?php echo $button_remove; ?>" />
 			  <i class="icon-trash"></i>-->
-			  <?php echo $text_remove; ?>
+			  <strong><?php echo $text_remove; ?></strong>
 			  </a>
 			  </div>
 			  </td>
@@ -242,7 +242,7 @@
 	</table>
   </div>
 	<div class="buttons">
-	<div class="right"><a href="<?php echo $checkout; ?>" class="button-cont-right btn-checkout-right"><?php echo $button_checkout; ?><i class="icon-check"></i></a></div>
+	<div class="center"><a href="<?php echo $checkout; ?>" class="button-cont-right btn-checkout-right"><?php echo $button_checkout; ?><i class="icon-check"></i></a></div>
 	<div class="center"><a href="<?php echo $continue; ?>" class="button-cont-right btn-cont-shopping"><?php echo $button_shopping; ?><i class="icon-circle-arrow-right"></i></a></div>
   </div>
   </div>

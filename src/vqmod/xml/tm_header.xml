@@ -155,7 +155,7 @@
 	<file name="catalog/language/*/common/header.php">
 		<operation error="skip">
 			<search position="after"><![CDATA[ $_['text_checkout']       = 'Checkout'; ]]></search>
-			<add><![CDATA[ $_['text_welcome']  = '<li class="login_h"><a href="%s"><i class="icon-lock"></i>Login</a></li> <li><a href="%s"><i class="icon-file-alt"></i>Sign Up</a></li>  ';
+			<add><![CDATA[ $_['text_welcome']  = '<li class="login_h"><a href="%s"><i class="icon-lock"></i>Login</a> / <a href="%s"><i class="icon-file-alt"></i>Sign Up</a></li>  ';
 $_['text_logged']   = '<li class="login_h"><a href="%s"><i class="icon-file-alt"></i>%s</a></li>  <li><a href="%s"><i class="icon-lock"></i>Logout</a></li> ';
 $_['text_account']  = 'My account';
 $_['text_checkout'] = 'Checkout';
