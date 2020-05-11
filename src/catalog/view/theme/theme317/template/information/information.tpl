@@ -15,6 +15,7 @@
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
            <?php
+              $index = 1;
               $dom = new DOMDocument();
               $dom->loadHTML($description);
               foreach($dom->getElementsByTagName('p') as $el){
@@ -40,6 +41,7 @@
                       </div>
                     </div>
                   <?php }
+                  $index++;
               }
               //$json = json_encode($result_elements, JSON_UNESCAPED_UNICODE);
               //echo $json;
