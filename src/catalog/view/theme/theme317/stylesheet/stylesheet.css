@@ -5886,10 +5886,10 @@ footer {
 	clear: both;
 
 	overflow: hidden;
+	color: whitesmoke !important;
+	background: #444444;
 
-	background: #f3f3f3;
-
-	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZkZmRmYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI4JSIgc3RvcC1jb2xvcj0iI2ZhZmFmYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZWVkZWMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	/* background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZkZmRmYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI4JSIgc3RvcC1jb2xvcj0iI2ZhZmFmYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZWVkZWMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
 
 	background: -moz-linear-gradient(top, #f3f3f3 0%, #fafafa 28%, #eeedec 100%);
 
@@ -5901,7 +5901,7 @@ footer {
 
 	background: -ms-linear-gradient(top, #f3f3f3 0%,#fafafa 28%,#eeedec 100%);
 
-	background: linear-gradient(to bottom, #f3f3f3 0%,#fafafa 28%,#eeedec 100%);
+	background: linear-gradient(to bottom, #f3f3f3 0%,#fafafa 28%,#eeedec 100%); */
 
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#eeedec',GradientType=0 );
 
@@ -5909,8 +5909,8 @@ footer {
 
 footer h3 {
 
-	color:#3e454c;
-
+	/* color:#3e454c; */
+	color: whitesmoke;
 	line-height:normal;
 
 	font-size:16px;
@@ -5918,7 +5918,8 @@ footer h3 {
 	word-wrap:break-word ;
 
 	font-weight:400;
-
+	border-bottom: 1px solid #ccc;
+	line-height: 30px;
 	}
 
 footer li {
@@ -5929,16 +5930,16 @@ footer li {
 
 footer .row li a:hover {
 
-	color:#333
-
+	/* color:#333 */
+color: white;
 	}
 
 footer .row li a {
 
 	font-size:12px;
 
-	color:#777777;
-
+	/* color:#777777; */
+	color: whitesmoke;
 	word-wrap:break-word 
 
 	}
@@ -5963,8 +5964,8 @@ footer .foot-phone i{
 
 	font-size:36px;
 
-	color:#7e7e7e;
-
+	/* color:#7e7e7e; */
+	color: whitesmoke;
 	width:1.25em;
 
 	margin-right:10px;

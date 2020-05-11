@@ -2,7 +2,7 @@
 /* menu */
 #menu {
 	/* background:url(../image/menu.png) repeat-x left bottom #b0aead; */
-	background-color: #666666;
+	background-color: #444444;
 	border-radius:3px;
 	}
 #menu ul {
@@ -18,7 +18,7 @@
 	position:relative;
 	border-radius:0;
 	
-	border-right:1px solid #444444;
+	border-right:1px solid #222222;
 	}
 #menu> ul > li > a {
 	padding:12px 19px;
@@ -32,8 +32,9 @@
 	
 }
 #menu> ul > li>a:hover, #menu > ul > li.sfHover>a, #menu > ul > li.active>a  {
-	/* background:url(../image/menu-hover.png) repeat-x left bottom #464645; */
-	background-color: #444444;
+	background:url(../image/menu-hover.png) repeat-x left bottom #464645;
+	/* background-color: #222222; */
+	border-radius: 3px;
 	}
 
 #menu> ul > li  ul {
