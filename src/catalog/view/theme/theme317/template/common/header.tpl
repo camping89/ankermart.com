@@ -200,7 +200,7 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 					<?php echo $currency; ?>
 					<?php echo $language; ?>
 					<ul class="links">
-						<!--<?php if (!isset($this->request->get['route'])) { $route='active'; }  else {$route='';}?> <li class="first"><a class="<?php echo $route; if (isset($this->request->get['route']) && $this->request->get['route']=="common/home") {echo "active";} ?>" href="<?php echo $home; ?>"><i class="icon-home"></i><?php echo $text_home; ?></a></li>-->
+						<?php if (!isset($this->request->get['route'])) { $route='active'; }  else {$route='';}?> <li class="first"><a class="<?php echo $route; if (isset($this->request->get['route']) && $this->request->get['route']=="common/home") {echo "active";} ?>" href="<?php echo $home; ?>"><i class="icon-home"></i><?php echo $text_home; ?></a></li>
 						<li><a href="/faq">FAQ</a></li>
 						<li><a href="/index.php?route=account/track_order">ORDER STATUS</a></li>
 						<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="account/wishlist") {echo "active";} ?>" href="<?php echo $wishlist; ?>" id="wishlist-total"><i class="icon-star"></i><?php echo $text_wishlist; ?></a></li>

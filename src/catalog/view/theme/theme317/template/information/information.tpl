@@ -4,14 +4,14 @@
 <div class="<?php if ($column_left or $column_right) { ?>span9<?php } ?> <?php if ($column_left and $column_right) { ?>span6<?php } ?> <?php if (!$column_right and !$column_left) { ?>span12 <?php } ?>" id="content"><?php echo $content_top; ?>
   <div class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <?php echo $breadcrumb['separator']; ?><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
+    <?php echo ucwords(strtolower($breadcrumb['separator'])); ?><a href="<?php echo $breadcrumb['href']; ?>"><?php echo ucwords(strtolower($breadcrumb['text'])); ?></a>
     <?php } ?>
   </div>
-  <h1 class="style-1"><?php echo $heading_title; ?></h1>
+  <!--<h1 class="style-1"><?php echo $heading_title; ?></h1>-->
   <div class="box-container">
     <!--<?php echo $description; ?>-->
     <div class="container">
-      <div class="content-collapse">
+      <div class="content-collapse content-page-info">
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
            <?php
@@ -23,7 +23,7 @@
               }
               foreach ($result_elements as $elementhtml) {
                   $element_items = explode("\r\n",$elementhtml["value"]);
-                  if(isset($element_items)){ ?>
+                  if(isset($element_items) ){ ?>
 
                     <div class="panel panel-default">
                       <div class="panel-heading" id="heading<?php echo $index;?>" role="tab">
@@ -36,7 +36,8 @@
                       </div>
                       <div class="panel-collapse collapse" id="collapse<?php echo $index;?>" role="tabpanel" aria-labelledby="heading<?php echo $index;?>">
                         <div class="panel-body">
-                          <?php  echo '<p>' . $element_items[1] . '</p>'; ?>
+                         
+                          <?php  if(sizeof($element_items) > 1) { echo '<p>' . $element_items[1] . '</p>'; } ?>
                         </div>
                       </div>
                     </div>

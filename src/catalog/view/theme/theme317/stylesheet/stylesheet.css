@@ -326,7 +326,7 @@ header #logo {
 
 	float:left;
 
-	margin:8px 0px 48px;
+	margin: -10px 0px 36px 0px;
 	width: 300px;
 	height: 50px;
 
@@ -3983,7 +3983,6 @@ border-radius:3px;
 	color:#3498db;
 
 	/* text-transform:uppercase; */
-	background-color: #f8f8f8;
 	padding: 15px;
 	line-height:24px;
 
@@ -4106,7 +4105,10 @@ border-radius:3px;
 	display:block;
 
 	}
-
+.product-info .free-shipping{
+	color:#d81e1e;
+	margin-left: 20px;
+}
 .tab-content ul{
 
 	margin-left:25px;
@@ -5872,11 +5874,18 @@ table.radio {
 	width: 48%;
 
 }
+/*Infomation page*/
+.content-page-info{
+	background: #313131 !important;
+}
 
+.content-page-info .panel-group .panel .panel-heading h4 a{
+	background-color: whitesmoke;
+}
 /* footer */
 
 footer {
-
+	box-shadow: 0 100vh 0 100vh #313131;
 	margin-top:20px;
 
 	padding-top:45px;
@@ -5918,7 +5927,7 @@ footer h3 {
 	word-wrap:break-word ;
 
 	font-weight:400;
-	border-bottom: 1px solid #bbbaba;
+	border-bottom: 1px solid #777777;
 	line-height: 30px;
 	}
 
@@ -5971,7 +5980,61 @@ footer .foot-phone i{
 	margin-right:10px;
 
 	}
-
+	.footer-socials-section {
+		padding: 30px 0 15px;
+		border-bottom: 1px solid #4A4A4A;
+		text-align: center;
+	}
+	ul.footer-socials {
+		list-style: none;
+		display: inline-block;
+		vertical-align: top;
+	}
+	ul.footer-socials li {
+		float: none;
+		display: inline-block;
+		margin-right: 30px;
+		margin-bottom: 15px;
+	}
+	ul.footer-socials li a {
+		line-height: 36px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	ul.footer-socials li a i {
+		width: 36px;
+		height: 36px;
+		line-height: 34px;
+		display: inline-block;
+		border-radius: 50%;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		background: none;
+		color: #999;
+		border: 1px solid #999;
+		-webkit-transition: all 0.2s ease-in-out;
+		-moz-transition: all 0.2s ease-in-out;
+		-o-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+		font-size: 14px;
+		vertical-align: top;
+	}
+	ul.footer-socials li a span {
+		display: none !important;
+	}
+	
+	#footer-copyright a{
+		color: whitesmoke;
+	}
+	#footer-copyright a:hover,#footer-copyright a:focus
+	{
+		text-decoration: underline;
+	}
+	#footer-copyright p {
+		text-align: center;
+		padding-top: 15px;
+		color: whitesmoke;
+	}
 span.toggle {
 
 	display:none;
@@ -5990,6 +6053,7 @@ span.toggle {
 
 	}
 
+	
 #designed {
 
     display: block;

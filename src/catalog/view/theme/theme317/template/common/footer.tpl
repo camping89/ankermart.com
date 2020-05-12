@@ -47,14 +47,63 @@
 		</div>
 		
 	</div>
-	
 	<div class="container">
+		<div class="footer-socials-section">
+			<ul class="footer-socials">
+				<li>
+					<a href="#" rel="nofollow" target="_blank">
+						<i class="penci-faicon icon-facebook"></i>
+						<span>Facebook</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" rel="nofollow" target="_blank">
+						<i class="penci-faicon icon-instagram"></i>
+						<span>Instagram</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" rel="nofollow" target="_blank">
+						<i class="penci-faicon icon-pinterest"></i>
+						<span>Pinterest</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" rel="nofollow" target="_blank">
+						<i class="penci-faicon icon-youtube-play"></i>
+						<span>Youtube</span>
+					</a>
+				</li>
+				<li>
+					<a href="mailto:cs@angasa.com">
+						<i class="penci-faicon icon-envelope"></i>
+						<span>Email</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="footer-logo-copyright footer-not-logo">
+			<div id="footer-copyright">
+				<p><?php echo $powered; ?></p>
+			</div>
+			<!--<div class="go-to-top-parent">
+				<a href="#" class="go-to-top">
+					<span>
+						<i class="penci-faicon icon-angle-up"></i>
+						<br>Back To Top
+						</span>
+					</a>
+				</div>
+			</div>-->
+		</div>
+	</div>
+	<!--<div class="container">
 		<div class="row">
 			<div class="span12">
 				<div id="powered"><?php echo $powered; ?></div>
 			</div>
 		</div>
-	</div>
+	</div>-->
 </footer>
 <script type="text/javascript" 	src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/livesearch.js"></script>
 </div>

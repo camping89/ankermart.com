@@ -12,11 +12,11 @@
 				<div class="content contact-f form-horizontal">
 					<!--<h2><?php echo $text_contact; ?></h2>-->
 					<div class="control-group">
-						<label class="control-label" for="name"><?php echo $entry_name; ?></label>
+						<label class="control-label" for="fullname"><?php echo $entry_fullname; ?></label>
 						<div class="controls">
-							<input class="span5" type="text" name="name" value="<?php echo $name; ?>" />
-							<?php if ($error_name) { ?>
-							<span class="error help-inline"><?php echo $error_name; ?></span>
+							<input class="span5" type="text" name="fullname" value="<?php echo $fullname; ?>" />
+							<?php if ($entry_fullname) { ?>
+							<span class="error help-inline"><?php echo $error_fullname; ?></span>
 							<?php } ?>
 						</div>
 					</div>
@@ -27,6 +27,24 @@
 							<?php if ($error_email) { ?>
 							<span class="error help-inline"><?php echo $error_email; ?></span>
 							<?php } ?>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="ordernumber"><?php echo $entry_ordernumber; ?></label>
+						<div class="controls">
+							<input class="span5" type="text" name="ordernumber" value="<?php echo $ordernumber; ?>" />
+							<?php if ($error_ordernumber) { ?>
+							<span class="error help-inline"><?php echo $error_ordernumber; ?></span>
+							<?php } ?>
+						</div>
+					</div>
+					
+					<div class="control-group">
+						<label class="control-label" for="topic"><?php echo $entry_topic; ?></label>
+						<div class="controls">
+							<select class="span5" type="text" name="topic">
+								<?php echo $topic; ?>
+							</select>
 						</div>
 					</div>
 					<div class="control-group">
@@ -66,9 +84,9 @@
 			</div>
 			</div>
 				<div class="box account">
-			<div class="box-heading">Maps</div>
+			<!--<div class="box-heading">Maps</div>-->
 			<div class="box-content">    
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50895.92717822532!2d-121.67505767292467!3d37.12902330612489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808e1e1fb1d09e6d%3A0x6812e93e20895cd5!2sMorgan+Hill%2C+CA!5e0!3m2!1sen!2sus!4v1566508900287!5m2!1sen!2sus" width="100%" height="180" frameborder="0" style="border:0" allowfullscreen></iframe>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50895.92717822532!2d-121.67505767292467!3d37.12902330612489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808e1e1fb1d09e6d%3A0x6812e93e20895cd5!2sMorgan+Hill%2C+CA!5e0!3m2!1sen!2sus!4v1566508900287!5m2!1sen!2sus" width="100%" height="248" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 			</div>
 			</div>

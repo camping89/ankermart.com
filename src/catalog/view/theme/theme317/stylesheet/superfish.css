@@ -11,7 +11,7 @@
 	padding: 0;
 
 }
-#menu > ul > li:first-child a{border-radius:5px 0 0 5px}
+#menu > ul > li:first-child a{border-radius:3px 0 0 3px}
 #menu > ul > li {
 	float: left;
 	z-index: 10;
@@ -32,11 +32,9 @@
 	
 }
 #menu> ul > li>a:hover, #menu > ul > li.sfHover>a, #menu > ul > li.active>a  {
-	background:url(../image/menu-hover.png) repeat-x left bottom #464645;
-	/* background-color: #222222; */
-	border-radius: 3px;
+	/* background:url(../image/menu-hover.png) repeat-x left bottom #464645; */
+	background-color: #989695;
 	}
-
 #menu> ul > li  ul {
 	display: none;
 	position: absolute; 

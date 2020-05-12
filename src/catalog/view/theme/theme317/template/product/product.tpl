@@ -128,9 +128,10 @@
 		<?php } else { ?>
 		<span class="price-new"><?php echo $special; ?></span><span class="price-old"><?php echo $price; ?></span> 
 		<?php } ?>
-		<?php if ($tax) { ?>
+		<!--<?php if ($tax) { ?>
 		<span class="price-tax"><?php echo $text_tax; ?> <?php echo $tax; ?></span>
-		<?php } ?>
+		<?php } ?>-->
+		<span class="free-shipping"><img src="./catalog/view/theme/theme317/image/icon-shipping.png" width="30px" height="30px" /> FREE FedEx Ground</span>
 		<?php if ($points) { ?>
 		<span class="reward"><small><?php echo $text_points; ?> <?php echo $points; ?></small></span>
 		<?php } ?>

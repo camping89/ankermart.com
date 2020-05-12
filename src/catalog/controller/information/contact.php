@@ -18,9 +18,15 @@ class ControllerInformationContact extends Controller {
 			$mail->timeout = $this->config->get('config_smtp_timeout');				
 			$mail->setTo($this->config->get('config_email'));
 	  		$mail->setFrom($this->request->post['email']);
-	  		$mail->setSender($this->request->post['name']);
-	  		$mail->setSubject(html_entity_decode(sprintf($this->language->get('email_subject'), $this->request->post['name']), ENT_QUOTES, 'UTF-8'));
-	  		$mail->setText(strip_tags(html_entity_decode($this->request->post['enquiry'], ENT_QUOTES, 'UTF-8')));
+	  		$mail->setSender($this->request->post['fullname']);
+			  $mail->setSubject(html_entity_decode(sprintf($this->language->get('email_subject'), $this->request->post['fullname']), ENT_QUOTES, 'UTF-8'));
+			  
+			$emailBody = 'Full Name: ' . $this->request->post['fullname'] . '<br/>';
+			$emailBody .= 'Order Number: ' . $this->request->post['ordernumber'] . '<br/>';
+			$emailBody .= 'Topic: ' .  $this->request->post['topic'] . '<br/>';
+			$emailBody .= 'Message: ' .  $this->request->post['enquiry'] . '<br/>';
+
+	  		$mail->setText(strip_tags(html_entity_decode($emailBody, ENT_QUOTES, 'UTF-8')));
       		$mail->send();
 
 	  		$this->redirect($this->url->link('information/contact/success'));
@@ -48,15 +54,24 @@ class ControllerInformationContact extends Controller {
     	$this->data['text_telephone'] = $this->language->get('text_telephone');
     	$this->data['text_fax'] = $this->language->get('text_fax');
 
-    	$this->data['entry_name'] = $this->language->get('entry_name');
+    	//$this->data['entry_name'] = $this->language->get('entry_name');
+    	$this->data['entry_fullname'] = $this->language->get('entry_fullname');
+    	$this->data['entry_ordernumber'] = $this->language->get('entry_ordernumber');
+    	$this->data['entry_topic'] = $this->language->get('entry_topic');
     	$this->data['entry_email'] = $this->language->get('entry_email');
     	$this->data['entry_enquiry'] = $this->language->get('entry_enquiry');
 		$this->data['entry_captcha'] = $this->language->get('entry_captcha');
 
-		if (isset($this->error['name'])) {
-    		$this->data['error_name'] = $this->error['name'];
+		if (isset($this->error['fullname'])) {
+    		$this->data['error_fullname'] = $this->error['fullname'];
 		} else {
-			$this->data['error_name'] = '';
+			$this->data['error_fullname'] = '';
+		}
+		
+		if (isset($this->error['ordernumber'])) {
+    		$this->data['error_ordernumber'] = $this->error['ordernumber'];
+		} else {
+			$this->data['error_ordernumber'] = '';
 		}
 		
 		if (isset($this->error['email'])) {
@@ -85,10 +100,10 @@ class ControllerInformationContact extends Controller {
     	$this->data['telephone'] = $this->config->get('config_telephone');
     	$this->data['fax'] = $this->config->get('config_fax');
     	
-		if (isset($this->request->post['name'])) {
-			$this->data['name'] = $this->request->post['name'];
+		if (isset($this->request->post['fullname'])) {
+			$this->data['fullname'] = $this->request->post['fullname'];
 		} else {
-			$this->data['name'] = $this->customer->getFirstName();
+			$this->data['fullname'] = $this->customer->getFirstName();
 		}
 
 		if (isset($this->request->post['email'])) {
@@ -97,6 +112,14 @@ class ControllerInformationContact extends Controller {
 			$this->data['email'] = $this->customer->getEmail();
 		}
 		
+		if (isset($this->request->post['ordernumber'])) {
+			$this->data['ordernumber'] = $this->request->post['ordernumber'];
+		} else {
+			$this->data['ordernumber'] = '';
+		}
+		
+		$this->data['topic'] = '<option value="Order Status" selected >Order Status</option> <option value="Product Infomation">Product Infomation</option> <option value="Gereral Customer Service">Gereral Customer Service</option>';
+
 		if (isset($this->request->post['enquiry'])) {
 			$this->data['enquiry'] = $this->request->post['enquiry'];
 		} else {
@@ -173,9 +196,12 @@ class ControllerInformationContact extends Controller {
 	}
 	
   	protected function validate() {
-    	if ((utf8_strlen($this->request->post['name']) < 3) || (utf8_strlen($this->request->post['name']) > 32)) {
-      		$this->error['name'] = $this->language->get('error_name');
+    	if ((utf8_strlen($this->request->post['fullname']) < 3) || (utf8_strlen($this->request->post['fullname']) > 32)) {
+      		$this->error['fullname'] = $this->language->get('error_fullname');
     	}
+		if(strlen($this->request->post['ordernumber']) == 0){
+			$this->error['ordernumber'] = $this->language->get('error_ordernumber');
+		}
 
     	if (!preg_match('/^[^\@]+@.*\.[a-z]{2,6}$/i', $this->request->post['email'])) {
       		$this->error['email'] = $this->language->get('error_email');
