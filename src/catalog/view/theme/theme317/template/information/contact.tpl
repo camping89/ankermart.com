@@ -85,8 +85,8 @@
 			</div>
 				<div class="box account">
 			<!--<div class="box-heading">Maps</div>-->
-			<div class="box-content">    
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50895.92717822532!2d-121.67505767292467!3d37.12902330612489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808e1e1fb1d09e6d%3A0x6812e93e20895cd5!2sMorgan+Hill%2C+CA!5e0!3m2!1sen!2sus!4v1566508900287!5m2!1sen!2sus" width="100%" height="248" frameborder="0" style="border:0" allowfullscreen></iframe>
+			<div class="box-content contact-map">    
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50895.92717822532!2d-121.67505767292467!3d37.12902330612489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808e1e1fb1d09e6d%3A0x6812e93e20895cd5!2sMorgan+Hill%2C+CA!5e0!3m2!1sen!2sus!4v1566508900287!5m2!1sen!2sus" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 			</div>
 			</div>

@@ -10,9 +10,10 @@ class ControllerModuleNewcarousel extends Controller {
 		$this->document->addScript('catalog/view/theme/' . $this->config->get('config_template') . '/js/sl/camera.js');
 		$this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/camera.css');
 				
-		$this->data['width'] = $setting['width'];
-		$this->data['height'] = $setting['height'];
-		
+		//$this->data['width'] = $setting['width'];
+		//$this->data['height'] = $setting['height'];
+		$this->data['width'] = 1170;
+		$this->data['height'] = 400;
 		$this->data['banners'] = array();
 		
 		if (isset($setting['banner_id'])) {
@@ -23,7 +24,8 @@ class ControllerModuleNewcarousel extends Controller {
 					$this->data['banners'][] = array(
 						'title' => $result['title'],
 						'link'  => $result['link'],
-						'image' => $this->model_tool_image->resize($result['image'], $setting['width'], $setting['height'])
+						//'image' => $this->model_tool_image->resize($result['image'], $setting['width'], $setting['height'])
+						'image' => $this->model_tool_image->resize($result['image'], 1170, 400)
 					);
 				}
 			}

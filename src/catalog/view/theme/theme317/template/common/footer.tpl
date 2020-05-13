@@ -75,7 +75,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="mailto:cs@angasa.com">
+					<a href="#">
 						<i class="penci-faicon icon-envelope"></i>
 						<span>Email</span>
 					</a>
