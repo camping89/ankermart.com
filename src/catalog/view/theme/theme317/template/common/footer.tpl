@@ -20,7 +20,7 @@
 			<div class="span3">
 				<h3><?php echo $text_service; ?></h3>
 				<ul>
-				<li><a href="/index.php?route=account/track_order">ORDER STATUS</a></li>
+				<li><a href="/index.php?route=account/track_order">Order Status</a></li>
 				<li><a href="<?php echo $contact; ?>"><?php echo $text_contact; ?></a></li>
 				<li><a href="<?php echo $return; ?>"><?php echo $text_return; ?></a></li>
 				<!--<li><a href="<?php echo $sitemap; ?>"><?php echo $text_sitemap; ?></a></li>-->
