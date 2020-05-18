@@ -5896,7 +5896,7 @@ footer {
 
 	padding-top:45px;
 
-	padding-bottom:66px;
+	/* padding-bottom:66px; */
 
 	clear: both;
 
@@ -6038,7 +6038,7 @@ footer .foot-phone i{
 	}
 	#footer-copyright p {
 		text-align: center;
-		padding-top: 15px;
+		padding-top: 20px;
 		color: whitesmoke;
 	}
 span.toggle {
