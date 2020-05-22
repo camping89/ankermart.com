@@ -25,7 +25,8 @@ class ControllerModuleNewcarousel extends Controller {
 						'title' => $result['title'],
 						'link'  => $result['link'],
 						//'image' => $this->model_tool_image->resize($result['image'], $setting['width'], $setting['height'])
-						'image' => $this->model_tool_image->resize($result['image'], 1170, 400)
+						//'image' => $this->model_tool_image->resize($result['image'], 1170, 400)
+						'image' => $this->model_tool_image->getoriginalsize($result['image'])
 					);
 				}
 			}

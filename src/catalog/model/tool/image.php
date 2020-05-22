@@ -53,5 +53,23 @@ class ModelToolImage extends Model {
 			return $this->config->get('config_url') . 'image/' . $new_image;
 		}	
 	}
+
+	public function getoriginalsize($filename) {
+		if (!file_exists(DIR_IMAGE . $filename) || !is_file(DIR_IMAGE . $filename)) {
+			return;
+		} 
+		
+		$info = pathinfo($filename);
+		
+		$extension = $info['extension'];
+		
+		$old_image = $filename;
+		
+		if (isset($this->request->server['HTTPS']) && (($this->request->server['HTTPS'] == 'on') || ($this->request->server['HTTPS'] == '1'))) {
+			return $this->config->get('config_ssl') . 'image/' . $old_image;
+		} else {
+			return $this->config->get('config_url') . 'image/' . $old_image;
+		}	
+	}
 }
 ?>
