@@ -118,13 +118,15 @@
     </label>
     
     <br />
-    <a id="button-register" class="button"><span><?php echo $button_continue; ?></span></a>
+    <!--<a id="button-register" class="button"><span><?php echo $button_continue; ?></span></a>-->
+    <a id="button-register" class="button-cont-right"><?php echo $button_continue; ?><i class="icon-circle-arrow-right"></i></a>
   </div>
 </div>
 <?php } else { ?>
 <div class="buttons">
   <div class="right">
-    <a id="button-register" class="button"><span><?php echo $button_continue; ?></span></a>
+    <!--<a id="button-register" class="button"><span><?php echo $button_continue; ?></span></a>-->
+    <a id="button-register" class="button-cont-right"><?php echo $button_continue; ?><i class="icon-circle-arrow-right"></i></a>
   </div>
 </div>
 <?php } ?>

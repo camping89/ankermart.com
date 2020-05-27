@@ -84,7 +84,7 @@
 		</div>
 		<div class="footer-logo-copyright footer-not-logo">
 			<div id="footer-copyright">
-				<p><?php echo  ($powered . $store_name . ' ' . ( date('Y', time()))); ?></p>
+				<p><?php echo  $powered; ?></p>
 			</div>
 			<!--<div class="go-to-top-parent">
 				<a href="#" class="go-to-top">

@@ -1477,13 +1477,13 @@ header .links a {
 
 .top-search  {
 
-	line-height:50px;
-
-	border-right:1px solid #000;
-
-	display:inline-block;
-
-	padding:0 20px;
+	border-right: 1px solid #000;
+	border-left: 1px solid #000;
+	display: inline-block;
+	padding:13px 15px 11px 15px;
+	float: right;
+	right: 83px;
+	position: absolute;
 
 	}
 
@@ -1495,7 +1495,7 @@ header .links a {
 
 .top-search i {
 
-	font-size:26px;
+	font-size:22px;
 
 	color:#7e7e7e;
 
@@ -2228,8 +2228,12 @@ table.list .center {
 /* button */
 
 a.button.details {margin-left:10px;}
-
-a.button {
+.payment .button{
+	padding: 10px;
+	color: white;
+	font-weight: bold;
+}
+a.button, .payment .button {
 
 	display: inline-block;
 
@@ -2285,7 +2289,7 @@ a.button span {
 
 	}
 
-a.button:hover {
+a.button:hover ,.payment .button:hover{
 
 	background: #7ecefd;
 
@@ -2293,7 +2297,7 @@ a.button:hover {
 
 	}
 
-a.button:hover span {
+a.button:hover span,.payment .button:hover {
 
 	color:#000;
 
@@ -4698,7 +4702,10 @@ input#sub_category {
 	}
 
 /************************** contact page *********************/
-
+.required-field{
+	color: tomato !important;
+	margin: auto 5px !important;
+}
 .contact-info {
 
 	border:1px solid #bbbaba;
@@ -5700,7 +5707,11 @@ i.icon-trash {
 	color:#323232
 
 	}
-
+.cart-row-qty {
+	display: inline-block;
+	text-align: center;
+	margin: 0 auto;
+}
 .cart-info td.name a {
 
 	/* color:#3498db; */
@@ -5999,8 +6010,9 @@ footer .foot-phone i{
 	ul.footer-socials li {
 		float: none;
 		display: inline-block;
-		margin-right: 30px;
+		margin-left: 15px;
 		margin-bottom: 15px;
+		margin-right: 15px;
 	}
 	ul.footer-socials li a {
 		line-height: 36px;
@@ -7112,7 +7124,7 @@ label{
 	  color: #333333 !important;
   }
   .btn-checkout-right{
-	  color: #6BA239 !important;
+	  color: #3498db !important;
   }
   .btn-cont-shopping{
 	  color: #333333 !important;

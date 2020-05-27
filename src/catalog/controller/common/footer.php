@@ -43,7 +43,8 @@ class ControllerCommonFooter extends Controller {
 		$this->data['wishlist'] = $this->url->link('account/wishlist', '', 'SSL');
 		$this->data['newsletter'] = $this->url->link('account/newsletter', '', 'SSL');		
 		$this->data['store_name'] =  $this->config->get('config_name');
-		$this->data['powered'] = sprintf($this->language->get('text_powered'), $this->config->get('config_name'), date('Y', time()));
+		//$this->data['powered'] = sprintf($this->language->get('text_powered'), date('Y', time()), $this->config->get('config_name'), '. All rights reserved.');
+		$this->data['powered'] = $this->language->get('text_powered') . date('Y', time()) . ' ' . $this->config->get('config_name') . '. All rights reserved.';
 		$this->data['social'] = sprintf($this->language->get('text_social'), $this->config->get('config_name'), date('Y', time()));
 
 		// Whos Online

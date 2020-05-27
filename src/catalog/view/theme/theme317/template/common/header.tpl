@@ -152,21 +152,24 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 			<?php } ?>-->
 		</ul>
 		<?php echo $language; ?>
-		<?php echo $currency; ?>
+		<!--<?php echo $currency; ?>-->
 		<?php if ($informations) { ?>
 		<ul class="foot">
-			<?php foreach ($informations as $information) { ?>
+			<?php foreach ($informations as $information) { 
+				if(strpos($information['title'],'Payment') === false) {
+				?>
 			<li><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>
-			<?php } ?>
+			<?php }
+			 } ?>
 		</ul>
 		<?php } ?>
 		<ul class="foot foot-1">
 			<li><a href="<?php echo $contact; ?>"><?php echo $text_contact; ?></a></li>
-			<li><a href="<?php echo $return; ?>"><?php echo $text_return; ?></a></li>
-			<li><a href="<?php echo $sitemap; ?>"><?php echo $text_sitemap; ?></a></li>
+			<!--<li><a href="<?php echo $return; ?>"><?php echo $text_return; ?></a></li>
+			<li><a href="<?php echo $sitemap; ?>"><?php echo $text_sitemap; ?></a></li>-->
 		</ul>
 		<ul class="foot foot-2">
-			<li><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>
+			<!--<li><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>-->
 			<li><a href="<?php echo $voucher; ?>"><?php echo $text_voucher; ?></a></li>
 			<li><a href="<?php echo $affiliate; ?>"><?php echo $text_affiliate; ?></a></li>
 			<li><a href="<?php echo $special; ?>"><?php echo $text_special; ?></a></li>

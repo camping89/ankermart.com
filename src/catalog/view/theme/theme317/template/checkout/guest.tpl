@@ -103,7 +103,7 @@
 <?php } ?>
 <div class="buttons">
   <div class="right">
-    <a id="button-guest" class="button"><span><?php echo $button_continue; ?></span></a>
+    <a id="button-guest" class="button-cont-right"><?php echo $button_continue; ?><i class="icon-circle-arrow-right"></i></a>
   </div>
 </div>
 <script type="text/javascript"><!--

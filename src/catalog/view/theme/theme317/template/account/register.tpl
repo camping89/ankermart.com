@@ -301,7 +301,7 @@
 				</div>
 				<?php if ($text_agree) { ?>
 				<div class="buttons">
-				<div class="left">
+				<div class="left regist-bottom-submit">
 					<label class="checkbox inline" >
 					
 					<?php if ($agree) { ?>

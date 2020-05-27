@@ -12,7 +12,7 @@
 				<div class="content contact-f form-horizontal">
 					<!--<h2><?php echo $text_contact; ?></h2>-->
 					<div class="control-group">
-						<label class="control-label" for="fullname"><?php echo $entry_fullname; ?></label>
+						<label class="control-label" for="fullname"><?php echo $entry_fullname; ?><span class="required-field">*</span></label>
 						<div class="controls">
 							<input class="span5" type="text" name="fullname" value="<?php echo $fullname; ?>" />
 							<?php if ($entry_fullname) { ?>
@@ -21,7 +21,7 @@
 						</div>
 					</div>
 					<div class="control-group">
-						<label class="control-label" for="email"><?php echo $entry_email; ?></label>
+						<label class="control-label" for="email"><?php echo $entry_email; ?><span class="required-field">*</span></label>
 						<div class="controls">
 							<input class="span5" type="text" name="email" value="<?php echo $email; ?>" />
 							<?php if ($error_email) { ?>
@@ -48,7 +48,7 @@
 						</div>
 					</div>
 					<div class="control-group">
-						<label class="control-label" for="enquiry"><?php echo $entry_enquiry; ?></label>
+						<label class="control-label" for="enquiry"><?php echo $entry_enquiry; ?><span class="required-field">*</span></label>
 						<div class="controls">
 							<textarea class="span5" name="enquiry" cols="40" rows="10" ><?php echo $enquiry; ?></textarea>
 							<?php if ($error_enquiry) { ?>

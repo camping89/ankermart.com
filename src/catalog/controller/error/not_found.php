@@ -35,15 +35,15 @@ class ControllerErrorNotFound extends Controller {
 			}
 											
        		$this->data['breadcrumbs'][] = array(
-				'text'      => $this->language->get('heading_title'),
+				'text'      => 'The page you requested cannot be found.',//$this->language->get('heading_title'),
 				'href'      => $this->url->link($route, $url, $connection),
         		'separator' => $this->language->get('text_separator')
       		);	   	
 		}
 		
-		$this->data['heading_title'] = $this->language->get('heading_title');
+		$this->data['heading_title'] = 'The page you requested cannot be found.';//$this->language->get('heading_title');
 		
-		$this->data['text_error'] = $this->language->get('text_error');
+		$this->data['text_error'] = 'The page you requested cannot be found.';// $this->language->get('text_error');
 		
 		$this->data['button_continue'] = $this->language->get('button_continue');
 		
