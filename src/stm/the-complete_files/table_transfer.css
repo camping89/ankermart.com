@@ -1,0 +1,314 @@
+table.dtsc-table-transfer {
+	border-collapse: separate;
+	border: #B6B6B6 thin solid;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+	margin: 10px 3px 0 3px;
+	width: 760px;
+}
+.dtsc-table-transfer.other {
+	width: auto;
+	min-width: 400px;
+	max-width: 534px;
+}
+table.dtsc-table-transfer tr {
+	height: 30px;
+}
+table.dtsc-table-transfer > thead {
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc3MjAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGRUZFRkUiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGMEYwRjEiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c3MjApIiAvPgo8L3N2Zz4=);
+}
+
+table.dtsc-table-transfer > thead > tr > th {
+	border-right: 1px solid #B6B6B6;
+	border-top: 1px solid #B6B6B6;
+	vertical-align: middle;
+	text-align: center;
+	font-weight: bold;
+	color: #2c548d;
+	text-shadow: none;
+}
+
+table.dtsc-table-transfer>thead>tr>td {
+	vertical-align: middle;
+	/* For WebKit (Safari, Google Chrome etc) */
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFF),
+		to(#EFEFF0) );
+	/* For Mozilla/Gecko (Firefox etc) */
+	background: -moz-linear-gradient(top, #FFF, #EFEFF0);
+	/* For Internet Explorer 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FEFEFE,
+		endColorstr=#F0F0F1 );
+	/* For Internet Explorer 8 */
+	-ms-filter:
+		"progid:DXImageTransform.Microsoft.gradient(startColorstr=#FEFEFE, endColorstr=#F0F0F1)";
+	border-right: #B6B6B6 thin solid;
+	border-top: #B6B6B6 thin solid;
+	text-align: center;
+	font-weight: bold;
+	color: #2c548d;
+}
+
+table.dtsc-table-transfer>tbody>tr.odd {
+	background: #FFF;
+}
+
+table.dtsc-table-transfer>tbody>tr.even {
+	background: #fafafa;
+}
+
+table.dtsc-table-transfer > tbody > tr > td {
+	border-right: #B6B6B6 thin solid;
+	border-top: #B6B6B6 thin solid;
+	padding-left: 5px;
+	padding-right: 5px;
+	vertical-align: middle !important;
+	max-width: 180px;
+	word-wrap: break-word;
+	/*text-align: left;*/
+}
+
+table.dtsc-table-transfer > tbody > tr > td > a {
+	color: #0000cc;
+	text-decoration: underline;
+}
+
+table.dtsc-table-transfer>tbody>tr>td>span.tru-tien {
+	color: red;
+}
+
+table.dtsc-table-transfer .dtsc-transfer-lastcol {
+	border-right: none;
+}
+
+table.dtsc-table-transfer .dtsc-transfer-head-first {
+	border: none;
+	padding-left: 5px;
+	padding-right: 5px;
+	color: #ff6600;
+	text-align: left;
+	font-weight: normal;
+}
+
+table.dtsc-table-transfer .dtsc-transfer-head-first>span {
+	font-weight: bold;
+}
+
+table.dtsc-table-transfer .dtsc-transfer-head-last {
+	border-top: #B6B6B6 thin solid;
+	border-right: none;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: right;
+	color: #0000cc;
+	line-height: 30px;
+	font-weight: normal;
+	background: #FFF;
+}
+
+table.dtsc-table-transfer .dtsc-transfer-foot {
+	border-top: #B6B6B6 thin solid;
+	border-right: none;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: right;
+	color: #0000cc;
+	line-height: 30px;
+	font-weight: normal;
+	background: #FFF;
+}
+
+div.dtsc-after-transfer-table {
+	color: #0066b0;
+	margin-left: 3px;
+	margin-right: 3px;
+	margin-top: 10px;
+}
+
+div.dtsc-transfer-num {
+	float: left;
+	width: 200px;
+}
+
+div.dtsc-after-transfer-table select {
+	color: #0066b0;
+}
+
+div.dtsc-transfer-paging {
+	float: left;
+	margin-left: 90px;
+}
+
+div.dtsc-transfer-paging-cell {
+	border: #5e92ff thin solid;
+	margin-right: 3px;
+	line-height: 20px;
+	height: 20px;
+	text-align: center;
+	min-width: 20px;
+	cursor: pointer;
+}
+
+div.dtsc-transfer-paging .dtsc-paging-current {
+	background: #8aadc5;
+	color: white;
+	border-color: #003399;
+}
+
+div.dtsc-after-transfer-table-note {
+	border: #fafafa thin solid;
+	background: #fafafa;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+	min-height: 30px;
+	margin: 10px 3px 0 3px;
+	padding: 3px;
+	font-style: italic;
+	color: #5400fd;
+}
+
+div.dtsc-account-info {
+	background: #f5f5f5;
+	padding: 10px;
+	margin: 10px 3px 0 3px;
+	border: #cccccc thin solid;
+}
+
+table.dtsc-account-owner {
+	border-collapse: separate;
+	border: #B6B6B6 thin solid;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+	margin: 10px 3px 0 3px;
+	width: 100%;
+	background: white;
+}
+
+table.dtsc-account-owner tr td {
+	border-right: #B6B6B6 thin solid;
+	border-top: #B6B6B6 thin solid;
+	padding-left: 5px;
+	padding-right: 5px;
+	vertical-align: middle !important;
+	text-align: left;
+	height: 20px
+}
+
+table.dtsc-account-owner tr td.dtsc-account-owner-title {
+	/* For WebKit (Safari, Google Chrome etc) */
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFF),
+		to(#EFEFF0) );
+	/* For Mozilla/Gecko (Firefox etc) */
+	background: -moz-linear-gradient(top, #FFF, #EFEFF0);
+	/* For Internet Explorer 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FEFEFE,
+		endColorstr=#F0F0F1 );
+	/* For Internet Explorer 8 */
+	-ms-filter:
+		"progid:DXImageTransform.Microsoft.gradient(startColorstr=#FEFEFE, endColorstr=#F0F0F1)";
+	color: #65548d;
+	font-weight: bold;
+	width: 60%;
+}
+
+table.dtsc-account-owner tr td.dtsc-account-owner-first-row {
+	border-top: none;
+}
+
+table.dtsc-account-owner tr td.dtsc-account-owner-last-col {
+	border-right: none;
+}
+
+table.dtsc-account-owner tr td.dtsc-account-owner-content {
+	text-transform: uppercase;
+	width: 40%;
+}
+
+table.dtsc-table-transfer > tbody > tr.ebankinternet-table-transaction-row-first > td{
+	color: blue;
+	text-align: right;
+}
+
+table.dtsc-table-transfer > tbody > tr.ebankinternet-table-transaction-row-last > td{
+	color: blue;
+	text-align: right;
+}
+
+.belowPanel{
+	width: 100%;
+	margin-top: 7px; 
+}
+
+.pagerPanel{
+	float: right;
+	color: #005495;
+}
+.selectPageSizePanel{
+	float: left;
+	margin-left: 4px; 
+	color: #005495;
+}
+
+.dtsc-transfer-num option{
+	color: #005495;
+}
+
+.dtsc-paging-next{
+ 	background: url("../images/next.png");
+ 	background-repeat:no-repeat;
+ 	min-width: 20px; 
+ 	background-position: center;
+ 	cursor: pointer;
+}
+
+.dtsc-paging-prev{
+ 	background: url("../images/prev.png");
+ 	background-repeat:no-repeat;
+ 	min-width: 20px; 
+ 	background-position: center;
+ 	cursor: pointer;
+}
+
+.dtsc-paging-first{
+	background: url("../images/first.png");
+ 	background-repeat:no-repeat;
+ 	min-width: 50px !important; 
+ 	background-position: left center;
+ 	cursor: pointer;
+}
+
+.dtsc-paging-last{
+	background: url("../images/last.png");
+ 	background-repeat:no-repeat;
+ 	min-width: 50px !important; 
+ 	background-position: left center;
+ 	cursor: pointer;
+}
+
+.dtsc-paging-current{
+	color: white;
+    background-color: #8AADC5;
+    border: 1px solid #003399 !important;
+    cursor: default !important;
+}
+
+.dtsc-ebankinternet-customize-hyperlink{
+	cursor: pointer;
+}
+
+.labelNumberOfRow{
+	margin: 3px 3px 3px 0;
+}
+
+.labelOnPage{
+	margin: 3px 3px 3px 5px;
+}
+
+.listBoxPageSize{
+	color: #0066B0;
+}

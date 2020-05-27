@@ -1,0 +1,81 @@
+<modification>
+	<id><![CDATA[Copy product from any market]]></id>
+	<version><![CDATA[1.5.2.1]]></version>
+	<vqmver><![CDATA[2.1.5]]></vqmver>
+	<author><![CDATA[http://opencarting.com]]></author>
+	<file name="admin/controller/catalog/product.php">
+		<operation>
+			<search position="after"><![CDATA[public function insert() {]]></search>
+			<add><![CDATA[ 
+				$this->document->addScript('/getSingleProduct/js/initAssembly.js');
+				$this->document->addScript('/getSingleProduct/js/ebay.js');
+				$this->document->addScript('/getSingleProduct/js/amazon.js');
+				$this->document->addScript('/getSingleProduct/js/aliexpress.js');
+				$this->document->addScript('/getSingleProduct/js/alibaba.js');
+				$this->document->addScript('/getSingleProduct/js/etsy.js');
+				$this->document->addScript('/getSingleProduct/js/focalprice.js');
+				$this->document->addScript('/getSingleProduct/js/overstock.js');
+				$this->document->addScript('/getSingleProduct/js/pandawill.js');
+				$this->document->addScript('/getSingleProduct/js/buy.js');
+				$this->document->addScript('/getSingleProduct/js/banggood.js');
+				$this->document->addScript('/getSingleProduct/js/miniinthebox.js');
+				$this->document->addScript('/getSingleProduct/js/target.js');
+				$this->document->addScript('/getSingleProduct/js/taobao.js');
+				$this->document->addScript('/getSingleProduct/js/play.js');
+				$this->document->addScript('/getSingleProduct/js/qvc.js');
+				$this->document->addScript('/getSingleProduct/js/bestbuy.js');
+				$this->document->addScript('/getSingleProduct/js/ioffer.js');
+				$this->document->addScript('/getSingleProduct/js/ekey.js');
+				$this->document->addScript('/getSingleProduct/js/wsdeal.js');
+				$this->document->addScript('/getSingleProduct/js/flipkart.js');
+				$this->document->addScript('/getSingleProduct/js/ecrater.js');
+				$this->document->addScript('/getSingleProduct/js/walmart.js');
+				$this->document->addScript('/getSingleProduct/js/sunsky.js');
+				$this->document->addScript('/getSingleProduct/js/microcenter.js');
+				$this->document->addScript('/getSingleProduct/js/tmart.js');
+				$this->document->addScript('/getSingleProduct/js/snapdeal.js');
+				$this->document->addScript('/getSingleProduct/js/sportsdirect.js');
+				$this->document->addScript('/getSingleProduct/js/6pm.js');
+			]]>
+			</add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA[public function update() {]]></search>
+			<add><![CDATA[
+				$this->document->addScript('/getSingleProduct/js/initAssembly.js');
+				$this->document->addScript('/getSingleProduct/js/ebay.js');
+				$this->document->addScript('/getSingleProduct/js/amazon.js');
+				$this->document->addScript('/getSingleProduct/js/aliexpress.js');
+				$this->document->addScript('/getSingleProduct/js/alibaba.js');
+				$this->document->addScript('/getSingleProduct/js/etsy.js');
+				$this->document->addScript('/getSingleProduct/js/focalprice.js');
+				$this->document->addScript('/getSingleProduct/js/overstock.js');
+				$this->document->addScript('/getSingleProduct/js/pandawill.js');
+				$this->document->addScript('/getSingleProduct/js/buy.js');
+				$this->document->addScript('/getSingleProduct/js/banggood.js');
+				$this->document->addScript('/getSingleProduct/js/miniinthebox.js');
+				$this->document->addScript('/getSingleProduct/js/target.js');
+				$this->document->addScript('/getSingleProduct/js/taobao.js');
+				$this->document->addScript('/getSingleProduct/js/play.js');
+				$this->document->addScript('/getSingleProduct/js/qvc.js');
+				$this->document->addScript('/getSingleProduct/js/bestbuy.js');
+				$this->document->addScript('/getSingleProduct/js/ioffer.js');
+				$this->document->addScript('/getSingleProduct/js/ekey.js');
+				$this->document->addScript('/getSingleProduct/js/wsdeal.js');
+				$this->document->addScript('/getSingleProduct/js/flipkart.js');
+				$this->document->addScript('/getSingleProduct/js/ecrater.js');
+				$this->document->addScript('/getSingleProduct/js/walmart.js');
+				$this->document->addScript('/getSingleProduct/js/sunsky.js');
+				$this->document->addScript('/getSingleProduct/js/microcenter.js');
+				$this->document->addScript('/getSingleProduct/js/tmart.js');
+				$this->document->addScript('/getSingleProduct/js/snapdeal.js');
+				$this->document->addScript('/getSingleProduct/js/sportsdirect.js');
+				$this->document->addScript('/getSingleProduct/js/6pm.js');
+			]]>
+			</add>
+		</operation>
+	</file>
+</modification>
+
+
+

@@ -1,0 +1,1 @@
+GetSingleProduct_assembly = {};GetSingleProduct_assembly.rootLocation = "";GetSingleProduct_assembly.adminLocation = "admin";

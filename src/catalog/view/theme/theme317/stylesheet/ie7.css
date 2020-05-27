@@ -1,0 +1,71 @@
+/* God I hate Microsoft! */
+header #logo a img {
+	width:auto
+	}
+.banner>div:hover h1 {
+	color:#313131;
+	}
+.box .box-content .box-product ul li .description {
+	margin-bottom:14px;
+	}
+.box .box-content .box-product ul li .image2 {
+	padding:30px 0
+	}
+.box .box-content .box-product ul li.last_line {
+	margin-bottom:0;
+	}
+.product-grid ul li, .box .box-content .box-product ul li {
+	border:1px solid #fff;
+	padding:20px;
+	background-color:#fff;
+	margin-bottom:30px;
+	border-radius:5px;
+	box-shadow:inset 0 0 36px rgba(0,0,0,0.05);
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	}
+.box .box-content .box-product ul li .spec {
+	text-transform:uppercase;
+	z-index:5;
+	display:block;
+	position:absolute;
+	top:20px;
+	right:20px;
+	font-size:12px;
+	color:#ffffff;
+	background: #fb2727;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZiMjcyNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkODFlMWUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #fb2727 0%, #d81e1e 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fb2727), color-stop(100%,#d81e1e));
+	background: -webkit-linear-gradient(top, #fb2727 0%,#d81e1e 100%);
+	background: -o-linear-gradient(top, #fb2727 0%,#d81e1e 100%);
+	background: -ms-linear-gradient(top, #fb2727 0%,#d81e1e 100%);
+	background: linear-gradient(to bottom, #fb2727 0%,#d81e1e 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb2727', endColorstr='#d81e1e',GradientType=0 );
+	border:1px solid;
+	border-color:#fc2727 #e42222 #9e1515 #e22121;
+	padding:2px 6px;
+	border-radius:3px;
+	} 
+.banner .s-desc {top:8px}
+#content .banner .banner-6 .s-desc {top:9%}
+#content .banner .banner-6 .s-desc h1 {font-size:30px;}
+#content .banner .banner-6 .s-desc h2 {font-size:20px;}
+#content .banner .banner-5, #content .banner .banner-4 {width:635px}
+#content .banner .banner-6, #content .banner .banner-3 {width:297px}
+
+.product-grid .cart, .box .box-product .cart {float:none;}
+#content .product-grid .wishlist a, #content .product-grid .compare a, 
+.box .wishlist a, .box .compare a {
+	margin:10px 10px 0 0
+	}
+.product-list .wishlist a, .product-list .compare a {
+	margin:0px 0px 0 10px
+	}
+.banner .s-desc {top:8px}
+#content .banner .banner-6 .s-desc {top:9%}
+#content .banner .banner-6 .s-desc h1 {font-size:30px;}
+#content .banner .banner-6 .s-desc h2 {font-size:20px;}
+.banner img {
+	width:auto
+	}

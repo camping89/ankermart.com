@@ -1,0 +1,107 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+	/* Most common stuff you'll need to change */
+	.dtsc-tab{
+		 padding: 10px 0; margin-top:2px;
+	}
+	
+	.dtsc-tab .coda-slider { width: 712px;}
+	.dtsc-tab .coda-slider-top{
+		width: 712px;
+		height: 16px;
+		background: url(../images/tab_top.png) center top no-repeat;
+		position: absolute;
+		top: -1px;
+		z-index: 100;
+	}
+	.dtsc-tab .coda-slider-bg{
+		width: 710px;
+		height: auto;
+		border-left: 1px solid #a0a0a0;
+		border-right: 1px solid #a0a0a0;
+		background: #e6e6e6 url(../images/tab_body.png) repeat-x;
+			
+		position: absolute;
+		top: 11px;
+	}
+	.dtsc-tab .coda-slider-bot{
+		width: 712px;
+		height: 12px;
+		background: url(../images/tab_bot.png) center bottom no-repeat;
+		position: absolute;
+		bottom: 0px;
+	}
+	
+	/* Use this to keep the slider content contained in a box even when JavaScript is disabled */
+	.dtsc-tab .coda-slider-no-js .coda-slider {  overflow: auto !important; padding-right: 20px }
+	
+	/* Change the width of the entire slider (without dynamic arrows) */
+	.coda-slider, .coda-slider .panel { width: 712px } 
+	
+	/* Change margin and width of the slider (with dynamic arrows) */
+	.coda-slider-wrapper.arrows .coda-slider, .coda-slider-wrapper.arrows .coda-slider .panel { width: 712px }
+	.coda-slider-wrapper.arrows .coda-slider { margin: 0 10px }
+	
+	/* Arrow styling */
+	.coda-nav-left a, .coda-nav-right a { background: #000; color: #fff; padding: 5px; width: 100px }
+	
+	/* Tab nav */
+	.coda-nav ul li a.current { background: url(../images/cov_hl.png) left no-repeat; color: #F69320; border: none !important; height: 30px; border: none; }
+	.coda-nav ul li a.current span { background: url(../images/cov_hr.png) right no-repeat;  padding-bottom: 10px;  border: none; }
+	
+	/* Panel padding */
+	.coda-slider .panel-wrapper { padding: 10px 20px 30px 20px; line-height: 15px; font-size: 11px;}
+	.coda-slider .panel-wrapper ul li{
+		color: #0074BE;
+		padding-left: 0px;
+		margin-left: 11px;
+	}
+	.inc, .dec, .inc2, .dec2{
+		width: 15px;
+		height: 13px;
+		text-indent: -9999px;
+		display: inline;
+		float: left;
+		color:#0074BE;
+	}
+	.dec, .dec2{
+		background: url(../images/dec_tab.png) 0 1px no-repeat;
+	}
+	.inc, .inc2{
+		background: url(../images/inc_tab.png) 0 1px no-repeat;
+	}
+	.inc2{
+		margin:-22px 0 0 215px;
+	}
+	.dec2{
+		margin:-22px 0 0 303px
+	}
+	.inc .txt
+	{
+		display:none; height: auto; font-family:Arial; font-size:20px;
+	}
+	.coda-slider .panel-wrapper ul li p{
+		margin-left: 30px;
+		color:#231f20;
+	}
+	
+	/* Preloader */
+	.coda-slider p.loading { padding: 20px; text-align: center }
+
+/* Don't change anything below here unless you know what you're doing */
+
+	/* Tabbed nav */
+	.coda-nav ul { background: url(../images/cov_bg.png) bottom repeat-x; clear: both; display: block; overflow: hidden; margin: 0; height: 30px; width: 700px !important;  margin-bottom: -1px; position: relative; z-index: 500;}
+	.coda-nav ul li { display: inline;}
+	.coda-nav ul li a span{background: url(../images/cov_r.png) right no-repeat; line-height: 30px; padding: 10px 20px 7px 0px; border-bottom: 1px solid #a0a0a0; }
+	.coda-nav ul li a {background: url(../images/cov_l.png) left no-repeat; color: #0074BE; font-size: 13px; display: block; float: left; margin-right: 5px; padding-left: 20px; text-decoration: none; border-bottom: 1px solid #a0a0a0; height: 29px;}
+	
+	/* Miscellaneous */
+	.coda-slider-wrapper { clear: both; overflow: auto }
+	.coda-slider { float: left; overflow: hidden; position: relative; }
+	.coda-slider .panel { display: block; float: left }
+	.coda-slider .panel-container { position: relative }
+	.coda-nav-left, .coda-nav-right { float: left }
+	.coda-nav-left a, .coda-nav-right a { display: block; text-align: center; text-decoration: none }

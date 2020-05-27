@@ -1,0 +1,42 @@
+@CHARSET "UTF-8";
+
+body {
+	background-color: #F6F6F6;
+	/* margin: 50px 100px; */
+}
+
+#menu-wrapper {width: 201px;float: left;margin-top: -15px;}
+UL.dtsc-menu UL {list-style-type: none;display: none;padding-left: 0;margin-left: 10px;}
+UL.dtsc-menu {list-style-type: none;width: 250px;background-color: #FFF;margin: 0;padding: 0;border: 1px solid #C1C1C1;border-radius: 5px;cursor: pointer;margin-top: 10px;}
+UL.dtsc-menu > LI {border-bottom: 1px solid #BCBCBC;padding: 5px 5px 5px 0px;min-height: 20px;}
+UL.dtsc-menu > LI > img {float: right;}
+UL.dtsc-menu > LI > span {background: url("../images/menu_expand.png") right no-repeat;display: block;padding-top: 3px;padding-bottom: 3px;}
+UL.dtsc-menu LI > UL > LI> span{
+	padding-left: 20px;
+}
+UL.dtsc-menu LI > UL > LI > span > a{
+	margin-left: 0;
+	line-height: 18px
+}
+UL.dtsc-menu LI {padding: 3px;overflow: hidden;}
+UL.dtsc-menu LI > span {display: block;padding-left: 5px;padding-top: 3px; padding-bottom: 3px;}
+UL.dtsc-menu a {text-decoration: none; color: #000000}
+UL.dtsc-menu a:VISITED {color: #000000;}
+UL.dtsc-menu a:HOVER {text-decoration: none;}
+SPAN.tree-expand {background: url("../images/menu_expand.png") left no-repeat;}
+SPAN.tree-collapse {background: url("../images/menu_collapse.png") left no-repeat;}
+SPAN.tree-leaf {background: url("../images/bullet-black.png") left 3px no-repeat;/* padding-left: 20px !important; */ cursor: default;}
+SPAN.tree-leaf a {/* margin-left: 5px; */color: #000;}
+SPAN.tree-leaf a:VISITED {color: #000;}
+SPAN.no-img{background-image:none !important;}
+UL.dtsc-menu > LI.expand > span{background-image: url("../images/menu_collapse.png")}
+UL.dtsc-menu {
+	background: -webkit-linear-gradient(bottom, #EFEFF0, white);
+	background: -moz-linear-gradient(bottom, #EFEFF0, white);
+	background: -ms-linear-gradient(bottom, #EFEFF0, white);
+	background: -o-linear-gradient(bottom, #EFEFF0, white);
+}
+UL > LI LI {/*border-top: 1px solid #BCBCBC;*/}
+.auto-height {height: auto !important;}
+.hightlight, .hightlight a {color: green !important;}
+#gwt-container{min-height:300px !important}

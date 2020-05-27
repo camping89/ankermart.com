@@ -1,0 +1,28 @@
+<modification>
+	<id>Change Dates to US/English Format</id>
+	<version>1.2</version>
+	<vqmver>2.1.5</vqmver>
+	<author>Concept211</author>
+
+	<file name="catalog/language/english/english.php">
+		<operation>
+			<search position="replace">$_['date_format_short']     = 'd/m/Y';</search>
+			<add>$_['date_format_short']     = 'm/d/Y';</add>
+		</operation>
+		<operation>
+			<search position="replace">$_['date_format_long']      = 'l dS F Y';</search>
+			<add>$_['date_format_long']      = 'l, F j, Y';</add>
+		</operation>
+	</file>
+
+	<file name="admin/language/english/english.php">
+		<operation>
+			<search position="replace">$_['date_format_short']             = 'd/m/Y';</search>
+			<add>$_['date_format_short']             = 'm/d/Y';</add>
+		</operation>
+		<operation>
+			<search position="replace">$_['date_format_long']              = 'l dS F Y';</search>
+			<add>$_['date_format_long']              = 'l, F j, Y';</add>
+		</operation>
+	</file>
+</modification>
