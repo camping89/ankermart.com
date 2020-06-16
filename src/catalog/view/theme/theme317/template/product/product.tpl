@@ -517,7 +517,9 @@ $(document).ready(function() {
 });
 //--></script> 
 <script type="text/javascript"><!--
-  
+  $(document).ready(function(){
+	  $(".tab-heading").trigger('click');
+  });
   $('select[name="profile_id"], input[name="quantity"]').change(function(){
     $.ajax({
 		url: 'index.php?route=product/product/getRecurringDescription',

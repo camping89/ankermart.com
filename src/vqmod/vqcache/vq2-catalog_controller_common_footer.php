@@ -56,8 +56,9 @@ class ControllerCommonFooter extends Controller {
 			$this->data['telephone'] = $this->config->get('config_telephone');
 			$this->data['fax'] = $this->config->get('config_fax');
 			
-
-		$this->data['powered'] = sprintf($this->language->get('text_powered'), $this->config->get('config_name'), date('Y', time()));
+		$this->data['store_name'] =  $this->config->get('config_name');
+		//$this->data['powered'] = sprintf($this->language->get('text_powered'), date('Y', time()), $this->config->get('config_name'), '. All rights reserved.');
+		$this->data['powered'] = $this->language->get('text_powered') . date('Y', time()) . ' ' . $this->config->get('config_name') . '. All rights reserved.';
 		$this->data['social'] = sprintf($this->language->get('text_social'), $this->config->get('config_name'), date('Y', time()));
 
 		// Whos Online

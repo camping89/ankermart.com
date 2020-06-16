@@ -28,11 +28,11 @@
 	  <table class="table table-bordered ">
 		<thead>
 		  <tr>
-			<td class="image"><?php echo $column_image; ?></td>
+			<td class="image" style="width:120px;"><?php echo $column_image; ?></td>
 			<td class="name"><?php echo $column_name; ?></td>
 			<td class="model"><?php echo $column_model; ?></td>
 			<td class="quantity"><?php echo $column_quantity; ?></td>
-			<td class="price-td"><?php echo $column_price; ?></td>
+			<!--<td class="price-td"><?php echo $column_price; ?></td>-->
 			<td class="total-td" style="border-right:none;"><?php echo $column_total; ?></td>
 		  </tr>
 		</thead>
@@ -66,23 +66,27 @@
 			  <?php if ($product['reward']) { ?>
 			  <small><?php echo $product['reward']; ?></small>
 			  <?php } ?></td>
-			<td class="model"><?php echo $product['model']; ?></td>
+			<td class="model"><span class="only-mobile">Model: </span><?php echo $product['model']; ?></td>
 			<td class="quantity">
 			  <div class="cart-row-qty">
-			  	<input style="float:left;width:45px;" type="text" name="quantity[<?php echo $product['key']; ?>]" value="<?php echo $product['quantity']; ?>" size="1" />
-				<span style="float:left; margin-left:10px;"><a class="input-update" onClick="document.getElementById('form-cart').submit()" ><i class=" icon-refresh"></i></a></span>
+			  	<input type="text" name="quantity[<?php echo $product['key']; ?>]" value="<?php echo $product['quantity']; ?>" size="1" />
+					<div class="mt5">
+						<!--<input class="input-update" type="submit"  alt="<?php echo $button_update; ?>" title="<?php echo $button_update; ?>" />-->
+						<a class="input-update" onClick="document.getElementById('form-cart').submit()" >
+							<i class="icon-refresh"></i>
+						</a>
+						&nbsp;
+						<a href="<?php echo $product['remove']; ?>">
+						
+							<i class="icon-trash"></i>
+							<!--<?php echo $text_remove; ?>-->
+						</a>
+					</div>
+					<div class="clear"></div>
 			  </div>
-			  <div class="wrapper mt5">
-			  <!--<input class="input-update" type="submit"  alt="<?php echo $button_update; ?>" title="<?php echo $button_update; ?>" />-->
-			  
-			  &nbsp;<a href="<?php echo $product['remove']; ?>">
-			  <!--<img src="catalog/view/theme/theme317/image/remove.png" alt="<?php echo $button_remove; ?>" title="<?php echo $button_remove; ?>" />
-			  <i class="icon-trash"></i>-->
-			  <strong><?php echo $text_remove; ?></strong>
-			  </a>
-			  </div>
+			 	<div class="clear"></div>
 			  </td>
-			<td class="price price-row-cart"><?php echo $product['price']; ?></td>
+			<!--<td class="price price-row-cart"><?php echo $product['price']; ?></td>-->
 			<td class="total"><?php echo $product['total']; ?></td>
 		  </tr>
 		  <?php } ?>
@@ -146,14 +150,14 @@
 		</form>
 	</div>
 	<div id="voucher" class="content">
-		<form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="gift">
+		<form class="form-horizontal" action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="gift">
 			<div class="control-group">
-				<label class="control-label" for="voucher"><?php echo $entry_voucher; ?>&nbsp;</label>
+				<label style="width:205px !important;" class="control-label" for="voucher"><?php echo $entry_voucher; ?>&nbsp;</label>
 				<div class="controls">
 					<input type="text" name="voucher" value="<?php echo $voucher; ?>" />
 					<input type="hidden" name="next" value="voucher" />
 					&nbsp;
-					<a onclick="$('#gift').submit();" class="button-cont-right"><?php echo $button_voucher; ?><i class="icon-circle-arrow-right"></i></a>
+					<a onclick="$('#gift').submit();" class="button-cont-right" style="margin-top:2px;"><?php echo $button_voucher; ?><i class="icon-circle-arrow-right"></i></a>
 				</div>
 			</div>
 			
@@ -235,15 +239,15 @@
 	<table id="total" class="table table-bordered">
 	  <?php $count =0; foreach ($totals as $total) { $count +=1; if ($total == end($totals)) {$a='last';} else {$a='';} ?>
 	  <tr class="row-table-<?php echo $count; ?>">
-		<td class="right cart-total-name <?php echo $a;?>" ><b><?php echo $total['title']; ?>:</b></td>
+		<td class="right cart-total-name <?php echo $a;?>" ><?php echo $total['title']; ?>:</td>
 		<td class="right cart-total1 <?php if($count==1) {echo 'price-row-cart';}?> <?php echo $a;?>"><?php echo $total['text']; ?></td>
 	  </tr>
 	  <?php } ?>
 	</table>
   </div>
 	<div class="buttons">
-	<div class="center"><a href="<?php echo $checkout; ?>" class="button-cont-right btn-checkout-right"><?php echo $button_checkout; ?><i class="icon-check"></i></a></div>
-	<div class="center"><a href="<?php echo $continue; ?>" class="button-cont-right btn-cont-shopping"><?php echo $button_shopping; ?><i class="icon-circle-arrow-right"></i></a></div>
+	<div class="right"><a href="<?php echo $checkout; ?>" class="button-cont-right btn-checkout-right"><?php echo $button_checkout; ?><i class="icon-check"></i></a></div>
+	<div class="left"><a href="<?php echo $continue; ?>" class="button-cont-right btn-checkout-right"><i class="icon-circle-arrow-left"></i><?php echo $button_shopping; ?></a></div>
   </div>
   </div>
   <?php echo $content_bottom; ?></div>

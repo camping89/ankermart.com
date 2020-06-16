@@ -33,7 +33,7 @@ define('DIR_LOGS', './system/logs/');
 define('DB_DRIVER', 'mysqliz');
 define('DB_HOSTNAME', 'localhost');
 define('DB_USERNAME', 'root');
-define('DB_PASSWORD', 'root');
+define('DB_PASSWORD', '');
 define('DB_DATABASE', 'ankepecl_ocar475');
 define('DB_PREFIX', 'oc_');
 ?>

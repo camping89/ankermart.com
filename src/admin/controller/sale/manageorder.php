@@ -11,6 +11,18 @@ class ControllerSaleManageOrder extends Controller {
 
     	$this->getList();
   	}
+	
+	public function getdetail(){
+		
+		$this->load->model('sale/order');
+		$order_id =	$this->request->get['orderid'];
+		$orderinfo = $this->model_sale_order->getOrder($order_id);
+		$orderproducts = $this->model_sale_order->getOrderProducts($order_id);
+		$json = array();
+		$json['orderproducts'] = $orderproducts;
+		$json['orderinfo'] = $orderinfo;
+		$this->response->setOutput(json_encode($json));
+	}
 
   	public function delete() {
 		$this->load->language('sale/order');
@@ -402,8 +414,12 @@ class ControllerSaleManageOrder extends Controller {
 			$orderinfo = $this->model_sale_order->getOrder($result['order_id']);
 			$orderproducts = $this->model_sale_order->getOrderProducts($result['order_id']);
 			$orderproductstr = '';
+			$orderproductskustr = '';
+			$orderproductnamestr = '';
 			foreach($orderproducts as $orderproduct){
-				$orderproductstr .= '<br />'.$orderproduct['model'].'*'.$orderproduct['quantity'];
+				$orderproductstr .= '<br />'.$orderproduct['model'].'<br />'.$orderproduct['quantity'];
+				$orderproductnamestr .= $orderproduct['name'].'<br />';
+				$orderproductskustr .= $orderproduct['model'].'<br />';
 			}
 			
 			$action[] = array(
@@ -422,7 +438,10 @@ class ControllerSaleManageOrder extends Controller {
 				'order_id'      => $result['order_id'],
 				'invoice_id'    => $result['invoice_id'],
 				'customer'      => $result['customer'],
-				'email'         => $result['email'].$orderproductstr,
+				'email'         => $result['email'],
+				'orderproduct'  => $orderproductstr,
+				'orderproductname' => $orderproductnamestr,
+				'orderproductsku' => $orderproductskustr,
 				'status'        => $result['status'],
 				'payment_method'=> $result['payment_method'],
 				'sub_total'     => $this->currency->format($result['sub_total'], $result['currency_code'], $result['currency_value']),
@@ -452,6 +471,9 @@ class ControllerSaleManageOrder extends Controller {
 		$this->data['column_invoice_id'] = $this->language->get('column_invoice_id');
     	$this->data['column_customer'] = $this->language->get('column_customer');
 		$this->data['column_email'] = $this->language->get('column_email');
+		$this->data['column_orderproduct'] = $this->language->get('column_orderproduct');
+		$this->data['column_orderproduct_name'] = $this->language->get('column_orderproduct_name');
+		$this->data['column_orderproduct_sku'] = $this->language->get('column_orderproduct_sku');
 		$this->data['column_status'] = $this->language->get('column_status');
 		$this->data['column_payment_method'] = $this->language->get('column_payment_method');
 		$this->data['column_sub_total'] = $this->language->get('column_sub_total');

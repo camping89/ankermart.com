@@ -2216,7 +2216,27 @@ class ControllerSaleOrder extends Controller {
 		$this->template = 'sale/order_history.tpl';		
 		
 		$this->response->setOutput($this->render());
-  	}
+	  }
+	  
+	public function historyform(){
+		$this->language->load('sale/order');
+		$order_id = $this->request->get['orderid'];
+		$this->load->model('sale/order');
+		$order_info = $this->model_sale_order->getOrder($order_id);
+		$this->data['order_id'] = $order_id;
+		$this->data['order_status_id'] = $order_info['order_status_id'];
+		$this->data['entry_order_status'] = $this->language->get('entry_order_status');
+		$this->data['entry_notify'] = $this->language->get('entry_notify');
+		$this->data['button_add_history'] = $this->language->get('button_add_history');
+		$this->data['entry_comment'] = $this->language->get('entry_comment');
+
+		$this->load->model('localisation/order_status');
+		$this->data['order_statuses'] = $this->model_localisation_order_status->getOrderStatuses();
+
+		$this->template = 'sale/order_history_form.tpl';		
+		
+		$this->response->setOutput($this->render());
+	}
 	
 	public function download() {
 		$this->load->model('sale/order');

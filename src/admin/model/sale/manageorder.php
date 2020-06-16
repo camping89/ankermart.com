@@ -238,7 +238,7 @@ class ModelSaleManageOrder extends Model {
 		}
 
 		if (isset($data['filter_customer']) && !is_null($data['filter_customer'])) {
-			$sql .= " AND CONCAT(o.shipping_firstname, ' ', o.shipping_lastname , '<br />' , o.shipping_address_1 , ' ' , o.shipping_address_2, ' ', o.shipping_city, ' ', o.shipping_zone, ' ', o.shipping_postcode , '<br />', o.shipping_country, '<br />', o.telephone) LIKE '%" . $this->db->escape($data['filter_customer']) . "%'";
+			$sql .= " AND CONCAT(o.shipping_firstname, ' ', o.shipping_lastname , '<br />' , o.shipping_address_1 , ' ' , o.shipping_address_2, ' ', o.shipping_city, ' ', o.shipping_zone, ' ', o.shipping_postcode , '<br />', o.shipping_country, '<br />', o.telephone, '<br />', o.email) LIKE '%" . $this->db->escape($data['filter_customer']) . "%'";
 		}
 
 		if (isset($data['filter_email']) && !is_null($data['filter_email'])) {

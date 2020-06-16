@@ -168,15 +168,15 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 			<!--<li><a href="<?php echo $return; ?>"><?php echo $text_return; ?></a></li>
 			<li><a href="<?php echo $sitemap; ?>"><?php echo $text_sitemap; ?></a></li>-->
 		</ul>
-		<ul class="foot foot-2">
-			<!--<li><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>-->
+		<!--<ul class="foot foot-2">
+			<li><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>
 			<li><a href="<?php echo $voucher; ?>"><?php echo $text_voucher; ?></a></li>
 			<li><a href="<?php echo $affiliate; ?>"><?php echo $text_affiliate; ?></a></li>
 			<li><a href="<?php echo $special; ?>"><?php echo $text_special; ?></a></li>
-		</ul>
+		</ul>-->
 		<ul class="foot foot-3">
 			<li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
-			<li><a href="<?php echo $newsletter; ?>"><?php echo $text_newsletter; ?></a></li>
+			<!--<li><a href="<?php echo $newsletter; ?>"><?php echo $text_newsletter; ?></a></li>-->
 		</ul>
 	</div>
 </div>
@@ -204,7 +204,7 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 					<?php echo $language; ?>
 					<ul class="links">
 						<?php if (!isset($this->request->get['route'])) { $route='active'; }  else {$route='';}?> <li class="first"><a class="<?php echo $route; if (isset($this->request->get['route']) && $this->request->get['route']=="common/home") {echo "active";} ?>" href="<?php echo $home; ?>"><i class="icon-home"></i><?php echo $text_home; ?></a></li>
-						<li><a href="/faq">FAQ</a></li>
+						<li><a href="/faq">FAQs</a></li>
 						<li><a href="/index.php?route=account/track_order">ORDER STATUS</a></li>
 						<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="account/wishlist") {echo "active";} ?>" href="<?php echo $wishlist; ?>" id="wishlist-total"><i class="icon-star"></i><?php echo $text_wishlist; ?></a></li>
 						<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="account/account") {echo "active";} ?>" href="<?php echo $account; ?>"><i class="icon-user"></i><?php echo $text_account; ?></a></li>
